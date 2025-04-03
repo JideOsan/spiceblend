@@ -1,1 +1,43 @@
-/* @import 'tailwindcss';    // <-- uncomment this if you want to use tailwind */
+@import 'tailwindcss';
+
+@theme {
+    --color-teal-1: rgb(15 128 125);
+    --color-teal-2: rgb(2 88 94);
+    --color-teal-4: rgb(165 220 218);
+    --color-teal-5: rgb(221 245 244);
+    --color-teal-7: rgb(183 217 216);
+    --color-lightTeal: rgb(210 235 234);
+
+    --color-transparent: transparent;
+    --color-C3DFDE: rgb(195 223 222);
+    --color-CBC7C580: #cbc7c580;
+    --color-CBC7C5: rgb(203 199 197);
+    --color-ECECEC: rgb(236 236 236);
+    --color-EDF8F7: rgb(237 248 247);
+    --color-F9F6F3: rgb(249 246 243);
+    --color-FBFBFB: rgb(251 251 251);
+    --color-d7eeff: rgb(215 238 255);
+    --color-f8f8f8: rgb(248 248 248);
+    --color-f9f6f3: rgb(249 246 243);
+    --color-ffe0de: rgb(255 224 222);
+    --color-fff2dd: rgb(255 242 221);
+    --color-fff3ee: rgb(255 243 238);
+    --color-gray-rgba: rgba(144, 144, 144, 0.95);
+    --color-black: rgb(38 31 29);
+    --color-coral-1: rgb(251 117 100);
+    --color-coral-2: rgb(234 91 80);
+    --color-coral-5: rgb(255 228 217);
+    --color-cream: rgb(249 246 243);
+    --color-danger: rgb(174 21 5);
+    --color-gray-100: rgb(245 245 245);
+    --color-gray-300: rgb(209 213 219);
+    --color-gray-350: rgb(217 217 217);
+    --color-gray-4: rgb(243 243 243);
+    --color-gray-50: rgb(249 250 251);
+    --color-gray-75: rgb(250 250 250);
+    --color-mustard-1: rgb(252 183 49);
+    --color-orange: rgb(252 183 49);
+    --color-primary: rgb(15 128 125);
+    --color-red-100: rgb(254 226 226);
+    --color-tomo-white: rgb(250 250 250);
+  }

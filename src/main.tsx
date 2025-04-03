@@ -2,9 +2,10 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './main.css';
-import Home from './home/index.tsx';
-import SpiceDetail from './spice-detail/index.tsx';
-import BlendDetail from './blend-detail/index.tsx';
+import SidebarLayout from './layouts/SidebarLayout.tsx';
+import Home from './app/home/index.tsx';
+import SpiceDetail from './app/spice-detail/index.tsx';
+import BlendDetail from './app/blend-detail/index.tsx';
 
 async function enableMocking() {
   const { worker } = await import('./mocks/browser');
@@ -15,17 +16,22 @@ async function enableMocking() {
 const router = createBrowserRouter(
   [
     {
-      path: '/',
-      element: <Home />,
-      errorElement: <Home />,
-    },
-    {
-      path: '/spices/:id',
-      element: <SpiceDetail />,
-    },
-    {
-      path: '/blends/:id',
-      element: <BlendDetail />,
+      element: <SidebarLayout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+          errorElement: <Home />,
+        },
+        {
+          path: '/spices/:id',
+          element: <SpiceDetail />,
+        },
+        {
+          path: '/blends/:id',
+          element: <BlendDetail />,
+        },
+      ],
     },
   ],
   {

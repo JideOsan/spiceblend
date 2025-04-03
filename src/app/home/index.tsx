@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import type { Blend, Spice } from '../types';
+import type { Blend, Spice } from '../../types';
 import { useEffect, useState } from 'react';
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
   useEffect(() => {
     async function fetchSpices() {
       const spicesResponse = await fetch('/api/v1/spices');
-      const spices = await spicesResponse.json();
+      const { data: spices } = await spicesResponse.json();
       setSpices(spices);
     }
 
