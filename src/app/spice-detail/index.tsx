@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import type { Spice } from '../types';
+import type { Spice } from '../../types';
 
 const SpiceDetail = () => {
   const { id } = useParams();
