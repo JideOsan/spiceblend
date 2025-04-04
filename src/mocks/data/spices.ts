@@ -5,6 +5,7 @@ export const data = () => [
     price: '$',
     color: '7e7ac',
     heat: 3,
+    description: 'A savory blend of garlic, oregano, and spices.',
   },
   {
     id: 1,
@@ -12,12 +13,14 @@ export const data = () => [
     price: '$',
     color: '5a9da5',
     heat: 2,
+    description: 'A fruity, mildly spicy Peruvian chile powder.',
   },
   {
     id: 2,
     name: 'Aji Amarillo Chiles, Dried',
     color: '912511',
     heat: 2,
+    description: 'Sweet, fruity dried chiles with a medium heat.',
   },
   {
     id: 3,
@@ -25,6 +28,7 @@ export const data = () => [
     price: '$$',
     color: '4a1af8',
     heat: 2,
+    description: 'Mild, smoky Peruvian chile powder with berry notes.',
   },
   {
     id: 4,
@@ -32,6 +36,7 @@ export const data = () => [
     price: '$$$',
     color: '9bacb0',
     heat: 5,
+    description: 'Deep red dried chiles with a smoky, mild heat.',
   },
   {
     id: 5,
@@ -39,6 +44,7 @@ export const data = () => [
     price: '$$',
     color: '7bd08a',
     heat: 1,
+    description: 'Mild paprika-like chiles with a sweet, earthy taste.',
   },
   {
     id: 6,
@@ -46,6 +52,7 @@ export const data = () => [
     price: '$$$$$',
     color: '9c80be',
     heat: 1,
+    description: 'Mildly spicy, tangy pepper flakes from Aleppo.',
   },
   {
     id: 7,
@@ -53,6 +60,7 @@ export const data = () => [
     price: '$$$',
     color: 'ca64d8',
     heat: 3,
+    description: 'Aromatic berries with flavors of cinnamon and cloves.',
   },
   {
     id: 8,
@@ -60,12 +68,14 @@ export const data = () => [
     price: '$$$$$',
     color: '791e52',
     heat: 1,
+    description: 'Warm, aromatic spice with hints of nutmeg and clove.',
   },
   {
     id: 9,
     name: 'Almond Extract, Natural',
     color: 'b99bfc',
     heat: 4,
+    description: 'Rich almond-flavored extract for baking and desserts.',
   },
   {
     id: 10,
@@ -73,6 +83,7 @@ export const data = () => [
     price: '$$$',
     color: 'aa871d',
     heat: 1,
+    description: 'Sweet, nutty flavor reminiscent of amaretto liqueur.',
   },
   {
     id: 11,
@@ -80,6 +91,7 @@ export const data = () => [
     price: '$$$$$',
     color: '3606db',
     heat: 4,
+    description: 'Mildly spicy, smoky dried poblano peppers.',
   },
   {
     id: 12,
@@ -87,6 +99,7 @@ export const data = () => [
     price: '$$$$$',
     color: '45b756',
     heat: 4,
+    description: 'Sweet, smoky ground ancho chiles with mild heat.',
   },
   {
     id: 13,
@@ -94,6 +107,7 @@ export const data = () => [
     price: '$$',
     color: 'a5c2df',
     heat: 2,
+    description: 'Strong licorice-flavored extract for baking and teas.',
   },
   {
     id: 14,
@@ -101,6 +115,7 @@ export const data = () => [
     price: '$$$$',
     color: 'bd8262',
     heat: 2,
+    description: 'Tiny seeds with a bold, sweet licorice-like flavor.',
   },
   {
     id: 15,
@@ -108,6 +123,7 @@ export const data = () => [
     price: '$$',
     color: '4cc18a',
     heat: 1,
+    description: 'Bright orange powder used for coloring and flavoring.',
   },
   {
     id: 16,
@@ -115,6 +131,7 @@ export const data = () => [
     price: '$$$$$',
     color: 'daa145',
     heat: 3,
+    description: 'Small red seeds with an earthy, slightly peppery taste.',
   },
   {
     id: 17,
@@ -122,6 +139,7 @@ export const data = () => [
     price: '$',
     color: 'b0cbc1',
     heat: 4,
+    description: 'A fine, neutral-tasting thickener for sauces and soups.',
   },
   {
     id: 18,
@@ -129,6 +147,7 @@ export const data = () => [
     price: '$$$$',
     color: '6a858f',
     heat: 2,
+    description: 'A robust black tea with malty, slightly spicy notes.',
   },
   {
     id: 19,
@@ -136,12 +155,14 @@ export const data = () => [
     price: '$$$$$',
     color: 'af4492',
     heat: 5,
+    description: 'A warm Middle Eastern spice mix with cinnamon and cloves.',
   },
   {
     id: 20,
     name: 'Bamboo Mushrooms, Dried',
     color: '233168',
     heat: 4,
+    description: 'Delicate, earthy mushrooms with a spongy texture.',
   },
   {
     id: 21,
@@ -149,6 +170,7 @@ export const data = () => [
     price: '$$$$',
     color: 'c111d5',
     heat: 4,
+    description: 'Dried basil has a sweet, peppery aroma, great for sauces.',
   },
   {
     id: 22,
@@ -156,6 +178,7 @@ export const data = () => [
     price: '$$$',
     color: '2ac64f',
     heat: 2,
+    description: 'Ground basil is mild and sweet, perfect for seasoning.',
   },
   {
     id: 23,
@@ -163,6 +186,7 @@ export const data = () => [
     price: '$$$$',
     color: 'f062ef',
     heat: 4,
+    description: 'Ground bay leaves add a floral, earthy depth to dishes.',
   },
   {
     id: 24,
@@ -170,6 +194,7 @@ export const data = () => [
     price: '$$$',
     color: '9e08e9',
     heat: 3,
+    description: 'Whole bay leaves enhance soups and stews with aroma.',
   },
   {
     id: 25,
@@ -177,6 +202,7 @@ export const data = () => [
     price: '$$',
     color: 'f2d24b',
     heat: 4,
+    description: 'A smoky, bold blend ideal for grilled meats and veggies.',
   },
   {
     id: 26,
@@ -184,6 +210,7 @@ export const data = () => [
     price: '$$',
     color: 'e47059',
     heat: 4,
+    description: 'Hickory BBQ seasoning adds a smoky, wood-fired taste.',
   },
   {
     id: 27,
@@ -191,6 +218,7 @@ export const data = () => [
     price: '$$$$',
     color: '2b8f7a',
     heat: 2,
+    description: 'Rich, sweet vanilla extract, perfect for baking needs.',
   },
   {
     id: 28,
@@ -198,6 +226,7 @@ export const data = () => [
     price: '$$$$',
     color: 'd162f',
     heat: 3,
+    description: 'Smooth vanilla extract for enhancing desserts and drinks.',
   },
   {
     id: 29,
@@ -205,6 +234,7 @@ export const data = () => [
     price: '$$$',
     color: '400c1c',
     heat: 1,
+    description: 'Thick vanilla paste with bean specks for rich flavor.',
   },
   {
     id: 30,
@@ -212,6 +242,7 @@ export const data = () => [
     price: '$',
     color: 'fd7af0',
     heat: 2,
+    description: 'A fiery blend of spices used in Ethiopian cuisine.',
   },
   {
     id: 31,
@@ -219,12 +250,14 @@ export const data = () => [
     price: '$$',
     color: '37aac',
     heat: 4,
+    description: 'Small but fiery chilies that pack a sharp, intense heat.',
   },
   {
     id: 32,
     name: "Bird's Eye Chili Powder",
     color: 'a45268',
     heat: 2,
+    description: 'A spicy powder great for curries, soups, and sauces.',
   },
   {
     id: 33,
@@ -232,6 +265,7 @@ export const data = () => [
     price: '$$$$',
     color: 'd7cdcd',
     heat: 1,
+    description: 'A gourmet mix of mushrooms for rich umami flavor.',
   },
   {
     id: 34,
@@ -239,6 +273,7 @@ export const data = () => [
     price: '$$$$$',
     color: '9f4c15',
     heat: 1,
+    description: 'A bold black tea infused with tart black currant notes.',
   },
   {
     id: 35,
@@ -246,6 +281,7 @@ export const data = () => [
     price: '$$$$$',
     color: '9e29f7',
     heat: 3,
+    description: 'A chewy mushroom used in soups and Asian stir-fries.',
   },
   {
     id: 36,
@@ -253,6 +289,7 @@ export const data = () => [
     price: '$$$$$',
     color: 'b26248',
     heat: 1,
+    description: 'Fermented garlic with a sweet, deep umami flavor.',
   },
   {
     id: 37,
@@ -260,6 +297,7 @@ export const data = () => [
     price: '$$',
     color: '912b6b',
     heat: 3,
+    description: 'A rich, sweet garlic powder great for seasoning dishes.',
   },
   {
     id: 38,
@@ -267,12 +305,14 @@ export const data = () => [
     price: '$',
     color: 'cf51c',
     heat: 2,
+    description: 'Classic ground black pepper adds bold heat to food.',
   },
   {
     id: 39,
     name: 'Black Peppercorns',
     color: '64a281',
     heat: 2,
+    description: 'Whole peppercorns deliver fresh, pungent spice when ground.',
   },
   {
     id: 40,
@@ -280,6 +320,7 @@ export const data = () => [
     price: '$$$$',
     color: '42c378',
     heat: 4,
+    description: 'Smoked peppercorns add depth to meats and stews.',
   },
   {
     id: 41,
@@ -287,6 +328,7 @@ export const data = () => [
     price: '$$$',
     color: '73e89d',
     heat: 2,
+    description: 'Ground smoked peppercorns bring a rich, smoky spice.',
   },
   {
     id: 42,
@@ -294,6 +336,7 @@ export const data = () => [
     price: '$$$$',
     color: '63355c',
     heat: 3,
+    description: 'A mineral-rich salt with a unique egg-like flavor.',
   },
   {
     id: 43,
@@ -301,12 +344,14 @@ export const data = () => [
     price: '$$$$$',
     color: 'd1224c',
     heat: 5,
+    description: 'A bold and malty black tea, great for a strong brew.',
   },
   {
     id: 44,
     name: 'Black Truffle Salt',
     color: '7f279c',
     heat: 1,
+    description: 'A luxurious salt infused with rich black truffle essence.',
   },
   {
     id: 45,
@@ -314,6 +359,7 @@ export const data = () => [
     price: '$$$$$',
     color: 'afdd0b',
     heat: 0,
+    description: 'Delicate mushrooms with an earthy, umami-packed taste.',
   },
   {
     id: 46,
@@ -321,6 +367,7 @@ export const data = () => [
     price: '$$$$$',
     color: '2a6660',
     heat: 4,
+    description: 'Rich, nutty flavoring ideal for baking and desserts.',
   },
   {
     id: 47,
@@ -328,6 +375,7 @@ export const data = () => [
     price: '$$$$',
     color: '75ce4',
     heat: 4,
+    description: 'A fruity tea blend with bold blackberry sweetness.',
   },
   {
     id: 48,
@@ -335,6 +383,7 @@ export const data = () => [
     price: '$$$$$',
     color: '11900c',
     heat: 0,
+    description: 'Earthy dried mushrooms prized for their rich umami.',
   },
   {
     id: 49,
@@ -342,6 +391,7 @@ export const data = () => [
     price: '$$$$$',
     color: '3c0dee',
     heat: 3,
+    description: 'Fine mushroom powder with deep, woodsy flavor.',
   },
   {
     id: 50,
@@ -349,6 +399,7 @@ export const data = () => [
     price: '$$$$',
     color: '678020',
     heat: 4,
+    description: 'Dried Chilean boletes with a bold, earthy richness.',
   },
   {
     id: 51,
@@ -356,6 +407,7 @@ export const data = () => [
     price: '$$$$',
     color: '974caf',
     heat: 4,
+    description: 'European boletes offer a hearty, nutty mushroom taste.',
   },
   {
     id: 52,
@@ -363,6 +415,7 @@ export const data = () => [
     price: '$$$$',
     color: '1e3546',
     heat: 4,
+    description: 'A small, classic glass bottle for oils and extracts.',
   },
   {
     id: 53,
@@ -370,6 +423,7 @@ export const data = () => [
     price: '$$$$',
     color: '53e439',
     heat: 1,
+    description: 'Medium-sized glass bottle, great for homemade infusions.',
   },
   {
     id: 54,
@@ -377,6 +431,7 @@ export const data = () => [
     price: '$$$',
     color: 'c9148a',
     heat: 3,
+    description: 'A sturdy glass bottle perfect for storing liquids.',
   },
   {
     id: 55,
@@ -384,6 +439,7 @@ export const data = () => [
     price: '$$$',
     color: '5a8b22',
     heat: 2,
+    description: 'Smooth rooibos tea infused with rich bourbon vanilla.',
   },
   {
     id: 56,
@@ -391,6 +447,7 @@ export const data = () => [
     price: '$$',
     color: '64a3eb',
     heat: 0,
+    description: 'A smooth brandy essence for baking and cocktails.',
   },
   {
     id: 57,
@@ -398,6 +455,7 @@ export const data = () => [
     price: '$$$$',
     color: '920ea5',
     heat: 1,
+    description: 'Deep molasses-rich dark brown sugar for baking.',
   },
   {
     id: 58,
@@ -405,6 +463,7 @@ export const data = () => [
     price: '$$',
     color: 'bd0fcf',
     heat: 3,
+    description: 'Fine brown sugar crystals perfect for sweetening.',
   },
   {
     id: 59,
@@ -412,6 +471,7 @@ export const data = () => [
     price: '$$$$',
     color: 'f0c8dc',
     heat: 1,
+    description: 'Bold seasoning blend for blackened meats and seafood.',
   },
   {
     id: 60,
@@ -419,6 +479,7 @@ export const data = () => [
     price: '$$',
     color: 'ee3216',
     heat: 5,
+    description: 'Spicy Cajun blend for authentic Louisiana-style dishes.',
   },
   {
     id: 61,
@@ -426,6 +487,7 @@ export const data = () => [
     price: '$$$$',
     color: 'a20219',
     heat: 3,
+    description: 'Spicy Italian chiles with smoky, fruity notes.',
   },
   {
     id: 62,
@@ -433,6 +495,7 @@ export const data = () => [
     price: '$$$',
     color: '4df43f',
     heat: 2,
+    description: 'Bold blend for seasoning grilled steaks and meats.',
   },
   {
     id: 63,
@@ -440,6 +503,7 @@ export const data = () => [
     price: '$$$$$',
     color: '62148f',
     heat: 0,
+    description: 'Sweet, maple-scented mushrooms for unique dishes.',
   },
   {
     id: 64,
@@ -447,6 +511,7 @@ export const data = () => [
     price: '$',
     color: 'e92a44',
     heat: 2,
+    description: 'Rich brown sugar cubes perfect for sweetening drinks.',
   },
   {
     id: 65,
@@ -454,6 +519,7 @@ export const data = () => [
     price: '$$$$',
     color: 'c3e8a1',
     heat: 1,
+    description: 'Classic white sugar cubes for coffee and tea.',
   },
   {
     id: 66,
@@ -461,6 +527,7 @@ export const data = () => [
     price: '$$',
     color: '71f42',
     heat: 4,
+    description: 'Sweet dried syrup granules with deep caramel notes.',
   },
   {
     id: 67,
@@ -468,6 +535,7 @@ export const data = () => [
     price: '$',
     color: 'd06832',
     heat: 3,
+    description: 'Organic dried syrup with a natural molasses flavor.',
   },
   {
     id: 68,
@@ -475,6 +543,7 @@ export const data = () => [
     price: '$$$$$',
     color: 'c0408c',
     heat: 3,
+    description: 'Fine powdered cane syrup for baking and desserts.',
   },
   {
     id: 69,
@@ -482,6 +551,7 @@ export const data = () => [
     price: '$$',
     color: '450dba',
     heat: 3,
+    description: 'Herby and savory seasoning inspired by New England.',
   },
   {
     id: 70,
@@ -489,6 +559,7 @@ export const data = () => [
     price: '$$$$',
     color: '19f126',
     heat: 1,
+    description: 'Aromatic seeds with a warm, anise-like flavor.',
   },
   {
     id: 71,
@@ -496,6 +567,7 @@ export const data = () => [
     price: '$$',
     color: '5e4a80',
     heat: 3,
+    description: 'Finely ground caraway seeds for baking and cooking.',
   },
   {
     id: 72,
@@ -503,6 +575,7 @@ export const data = () => [
     price: '$$$$$',
     color: 'bf8079',
     heat: 1,
+    description: 'Smoky black cardamom pods used in savory dishes.',
   },
   {
     id: 73,
@@ -510,6 +583,7 @@ export const data = () => [
     price: '$$$',
     color: '88ee89',
     heat: 1,
+    description: 'Fragrant green cardamom for sweet and savory recipes.',
   },
   {
     id: 74,
@@ -517,6 +591,7 @@ export const data = () => [
     price: '$$$',
     color: '254440',
     heat: 3,
+    description: 'Pure cardamom seeds, great for fresh grinding.',
   },
   {
     id: 75,
@@ -524,6 +599,7 @@ export const data = () => [
     price: '$',
     color: 'cfd837',
     heat: 1,
+    description: 'Coarse-cut black cardamom with smoky depth.',
   },
   {
     id: 76,
@@ -531,6 +607,7 @@ export const data = () => [
     price: '$$',
     color: 'a4dce0',
     heat: 5,
+    description: 'Finely ground cardamom for baking and spice blends.',
   },
   {
     id: 77,
@@ -538,6 +615,7 @@ export const data = () => [
     price: '$$$$',
     color: '3b4072',
     heat: 4,
+    description: 'Bold red cardamom with citrus and camphor notes.',
   },
   {
     id: 78,
@@ -545,6 +623,7 @@ export const data = () => [
     price: '$$$$',
     color: '24591a',
     heat: 2,
+    description: 'Peppery carom seeds, ground for easy use in dishes.',
   },
   {
     id: 79,
@@ -552,6 +631,7 @@ export const data = () => [
     price: '$',
     color: 'c26462',
     heat: 1,
+    description: 'Mild Mexican chiles with a smoky, nutty flavor.',
   },
   {
     id: 80,
@@ -559,12 +639,14 @@ export const data = () => [
     price: '$$$',
     color: '26be5e',
     heat: 1,
+    description: 'Strong, spicy cinnamon bark with warm, sweet notes.',
   },
   {
     id: 81,
     name: 'Caster Sugar (Baker’s Special)',
     color: '54a45e',
     heat: 2,
+    description: 'A fine sugar perfect for baking and sweetening drinks.',
   },
   {
     id: 82,
@@ -572,6 +654,7 @@ export const data = () => [
     price: '$$$$',
     color: 'f63799',
     heat: 3,
+    description: 'Delicate, nutty-flavored mushrooms great for soups.',
   },
   {
     id: 83,
@@ -579,6 +662,7 @@ export const data = () => [
     price: '$$$$',
     color: '675963',
     heat: 2,
+    description: 'A hot, spicy ground pepper used in many cuisines.',
   },
   {
     id: 84,
@@ -586,6 +670,7 @@ export const data = () => [
     price: '$$$$',
     color: '54023',
     heat: 4,
+    description: 'A flavorful blend of salt and ground celery seeds.',
   },
   {
     id: 85,
@@ -593,6 +678,7 @@ export const data = () => [
     price: '$$$$',
     color: '5af2af',
     heat: 4,
+    description: 'Small, earthy seeds used for pickling and seasoning.',
   },
   {
     id: 86,
@@ -600,6 +686,7 @@ export const data = () => [
     price: '$$',
     color: 'fd40dd',
     heat: 3,
+    description: 'Dried cross-cut celery pieces ideal for soups.',
   },
   {
     id: 87,
@@ -607,6 +694,7 @@ export const data = () => [
     price: '$',
     color: '1af82f',
     heat: 2,
+    description: 'A premium black tea with a smooth, mild flavor.',
   },
   {
     id: 88,
@@ -614,6 +702,7 @@ export const data = () => [
     price: '$$$$',
     color: '76faf6',
     heat: 1,
+    description: 'A warm, spiced tea blend with cinnamon and cardamom.',
   },
   {
     id: 89,
@@ -621,6 +710,7 @@ export const data = () => [
     price: '$$$$$',
     color: '9650d2',
     heat: 4,
+    description: 'A soothing tea combining chamomile and refreshing mint.',
   },
   {
     id: 90,
@@ -628,6 +718,7 @@ export const data = () => [
     price: '$$$',
     color: '2ca838',
     heat: 4,
+    description: 'Mild, dried mushrooms ideal for sauces and soups.',
   },
   {
     id: 91,
@@ -635,6 +726,7 @@ export const data = () => [
     price: '$$$$',
     color: '935c53',
     heat: 5,
+    description: 'Golden, aromatic mushrooms prized for their flavor.',
   },
   {
     id: 92,
@@ -642,6 +734,7 @@ export const data = () => [
     price: '$$',
     color: 'a6bc75',
     heat: 4,
+    description: 'A sweet and tart extract perfect for baking.',
   },
   {
     id: 93,
@@ -649,6 +742,7 @@ export const data = () => [
     price: '$$$$$',
     color: 'ae5e2',
     heat: 0,
+    description: 'A mild herb with a subtle anise-like flavor.',
   },
   {
     id: 94,
@@ -656,6 +750,7 @@ export const data = () => [
     price: '$$$',
     color: '160642',
     heat: 1,
+    description: 'A spicy, smoky chili powder used in Mexican dishes.',
   },
   {
     id: 95,
@@ -663,6 +758,7 @@ export const data = () => [
     price: '$$$',
     color: 'd11f90',
     heat: 2,
+    description: 'Small, fiery dried chilies with a bold flavor.',
   },
   {
     id: 96,
@@ -670,6 +766,7 @@ export const data = () => [
     price: '$$$',
     color: 'eff32',
     heat: 4,
+    description: 'A zesty salt infused with green chili flavor.',
   },
   {
     id: 97,
@@ -677,6 +774,7 @@ export const data = () => [
     price: '$$$$$',
     color: '2f022a',
     heat: 4,
+    description: 'A blend of ground chilies and spices for heat.',
   },
   {
     id: 98,
@@ -684,12 +782,14 @@ export const data = () => [
     price: '$$$$$',
     color: '135984',
     heat: 5,
+    description: 'Tiny, fiery peppers with a smoky and intense heat.',
   },
   {
     id: 99,
     name: 'Chimichurri Blend',
     color: '5cfc54',
     heat: 0,
+    description: 'A tangy herb blend used in Argentine cooking.',
   },
   {
     id: 100,
@@ -697,6 +797,7 @@ export const data = () => [
     price: '$$$$',
     color: 'a06065',
     heat: 2,
+    description: 'Smoky, dried jalapeño peppers used for rich flavor.',
   },
   {
     id: 101,
@@ -704,6 +805,7 @@ export const data = () => [
     price: '$$',
     color: '49e0c0',
     heat: 4,
+    description: 'Smoky, sweet peppers used in Mexican dishes.',
   },
   {
     id: 102,
@@ -711,6 +813,7 @@ export const data = () => [
     price: '$$$$$',
     color: '79c5fc',
     heat: 2,
+    description: 'A rich, smoky chili powder with medium heat.',
   },
   {
     id: 103,
@@ -718,12 +821,14 @@ export const data = () => [
     price: '$$',
     color: '45c943',
     heat: 1,
+    description: 'A bold, smoky rub perfect for grilling meats.',
   },
   {
     id: 104,
     name: 'Chipotle Powder, Morita',
     color: 'f84619',
     heat: 4,
+    description: 'Ground Morita peppers with smoky, mild heat.',
   },
   {
     id: 105,
@@ -731,6 +836,7 @@ export const data = () => [
     price: '$',
     color: '491ea7',
     heat: 1,
+    description: 'Dried chives add mild onion flavor to dishes.',
   },
   {
     id: 106,
@@ -738,6 +844,7 @@ export const data = () => [
     price: '$$$',
     color: 'bfdd04',
     heat: 4,
+    description: 'Powdered chives for soups, dips, and seasoning.',
   },
   {
     id: 107,
@@ -745,12 +852,14 @@ export const data = () => [
     price: '$$$$$',
     color: 'ee0fe',
     heat: 1,
+    description: 'Festive pepper blend for unique holiday flavors.',
   },
   {
     id: 108,
     name: 'Cilantro Flakes, Dried',
     color: '686bfb',
     heat: 1,
+    description: 'Dried cilantro with bright, citrus-like flavor.',
   },
   {
     id: 109,
@@ -758,6 +867,7 @@ export const data = () => [
     price: '$$$$',
     color: '3d85a1',
     heat: 1,
+    description: 'A soothing blend of cinnamon and dried apricot.',
   },
   {
     id: 110,
@@ -765,12 +875,14 @@ export const data = () => [
     price: '$$$$',
     color: 'a02f9a',
     heat: 3,
+    description: 'Pure cinnamon extract for rich, warm flavor.',
   },
   {
     id: 111,
     name: 'Cinnamon Sticks, 10 Inch Long',
     color: '22015e',
     heat: 1,
+    description: 'Long cinnamon sticks ideal for infusions and drinks.',
   },
   {
     id: 112,
@@ -778,6 +890,7 @@ export const data = () => [
     price: '$$',
     color: 'fdadec',
     heat: 3,
+    description: 'Short cinnamon sticks great for baking and teas.',
   },
   {
     id: 113,
@@ -785,6 +898,7 @@ export const data = () => [
     price: '$',
     color: '192895',
     heat: 0,
+    description: 'Mild, sweet cinnamon known as "true cinnamon."',
   },
   {
     id: 114,
@@ -792,6 +906,7 @@ export const data = () => [
     price: '$$$$',
     color: 'bc5579',
     heat: 5,
+    description: 'Bold, spicy cinnamon commonly used in baking.',
   },
   {
     id: 115,
@@ -799,6 +914,7 @@ export const data = () => [
     price: '$$$$',
     color: '1f47ee',
     heat: 3,
+    description: 'Sweet, robust cinnamon with strong, spicy notes.',
   },
   {
     id: 116,
@@ -806,6 +922,7 @@ export const data = () => [
     price: '$',
     color: '8c510d',
     heat: 5,
+    description: 'Zesty blend with citrus and ginger for spiced dishes.',
   },
   {
     id: 117,
@@ -813,6 +930,7 @@ export const data = () => [
     price: '$$',
     color: '44ec20',
     heat: 2,
+    description: 'A calming herbal tea with citrus and chamomile.',
   },
   {
     id: 118,
@@ -820,6 +938,7 @@ export const data = () => [
     price: '$$$$',
     color: '627ce3',
     heat: 1,
+    description: 'Green tea infused with bright, zesty citrus flavors.',
   },
   {
     id: 119,
@@ -827,6 +946,7 @@ export const data = () => [
     price: '$$$$',
     color: '349083',
     heat: 2,
+    description: 'Ground cloves add warmth to baking and curries.',
   },
   {
     id: 120,
@@ -834,6 +954,7 @@ export const data = () => [
     price: '$$$',
     color: '10739e',
     heat: 3,
+    description: 'Aromatic whole cloves with rich, spicy notes.',
   },
   {
     id: 121,
@@ -841,6 +962,7 @@ export const data = () => [
     price: '$$$$$',
     color: '392bb8',
     heat: 4,
+    description: 'Crushed cacao beans with rich, chocolatey flavor.',
   },
   {
     id: 122,
@@ -848,6 +970,7 @@ export const data = () => [
     price: '$$$',
     color: 'ccf0cd',
     heat: 2,
+    description: 'Crunchy toasted coconut chips with mild sweetness.',
   },
   {
     id: 123,
@@ -855,6 +978,7 @@ export const data = () => [
     price: '$$',
     color: 'fa6726',
     heat: 0,
+    description: 'Plain coconut chips, perfect for snacks or baking.',
   },
   {
     id: 124,
@@ -862,6 +986,7 @@ export const data = () => [
     price: '$$',
     color: '3f8908',
     heat: 1,
+    description: 'Coconut essence adds tropical flavor to dishes.',
   },
   {
     id: 125,
@@ -869,6 +994,7 @@ export const data = () => [
     price: '$$$',
     color: '1c6b52',
     heat: 2,
+    description: 'Powdered coconut milk for curries and desserts.',
   },
   {
     id: 126,
@@ -876,6 +1002,7 @@ export const data = () => [
     price: '$$$$',
     color: 'cc2fa',
     heat: 1,
+    description: 'Natural sweetener with a caramel-like flavor.',
   },
   {
     id: 127,
@@ -883,12 +1010,14 @@ export const data = () => [
     price: '$$',
     color: '7bb139',
     heat: 5,
+    description: 'Shredded coconut for baking and dessert toppings.',
   },
   {
     id: 128,
     name: 'Coconut, Macaroon (Finely Shredded)',
     color: '648894',
     heat: 1,
+    description: 'Finely shredded coconut for delicate desserts.',
   },
   {
     id: 129,
@@ -896,6 +1025,7 @@ export const data = () => [
     price: '$',
     color: '41ecb4',
     heat: 5,
+    description: 'Dried coconut, perfect for baking and cooking.',
   },
   {
     id: 130,
@@ -903,6 +1033,7 @@ export const data = () => [
     price: '$$$$$',
     color: '41a1c4',
     heat: 2,
+    description: 'Bold spice rub with coffee and chili flavors.',
   },
   {
     id: 131,
@@ -910,12 +1041,14 @@ export const data = () => [
     price: '$$$',
     color: 'fd8c5e',
     heat: 1,
+    description: 'Rich coffee flavoring for drinks and desserts.',
   },
   {
     id: 132,
     name: 'Coriander Powder',
     color: '7b5409',
     heat: 5,
+    description: 'Ground coriander seeds with warm, citrusy notes.',
   },
   {
     id: 133,
@@ -923,6 +1056,7 @@ export const data = () => [
     price: '$$$$',
     color: '2131ca',
     heat: 2,
+    description: 'Large coriander seeds with bright, citrus flavor.',
   },
   {
     id: 134,
@@ -930,6 +1064,7 @@ export const data = () => [
     price: '$$',
     color: '330586',
     heat: 4,
+    description: 'Cracked seeds for texture and bold coriander taste.',
   },
   {
     id: 135,
@@ -937,6 +1072,7 @@ export const data = () => [
     price: '$$',
     color: 'fb643f',
     heat: 3,
+    description: 'Dried husks used for tamales and food wrapping.',
   },
   {
     id: 136,
@@ -944,6 +1080,7 @@ export const data = () => [
     price: '$$$$',
     color: '9f8716',
     heat: 1,
+    description: 'A baking staple used for stabilizing egg whites.',
   },
   {
     id: 137,
@@ -951,6 +1088,7 @@ export const data = () => [
     price: '$$$$',
     color: '22296a',
     heat: 1,
+    description: 'Peppery berries with hints of allspice flavor.',
   },
   {
     id: 138,
@@ -958,6 +1096,7 @@ export const data = () => [
     price: '$',
     color: 'f13aec',
     heat: 2,
+    description: 'Ground cumin adds warmth to curries and dishes.',
   },
   {
     id: 139,
@@ -965,6 +1104,7 @@ export const data = () => [
     price: '$$$',
     color: '24e4d2',
     heat: 4,
+    description: 'Whole seeds with earthy, nutty flavor.',
   },
   {
     id: 140,
@@ -972,12 +1112,14 @@ export const data = () => [
     price: '$$$$$',
     color: 'a28e3e',
     heat: 4,
+    description: 'Special salt used for curing and preserving meats.',
   },
   {
     id: 141,
     name: 'Daikon Radish Seeds, Organic',
     color: 'c82af1',
     heat: 3,
+    description: 'Organic seeds used for sprouts and microgreens.',
   },
   {
     id: 142,
@@ -985,6 +1127,7 @@ export const data = () => [
     price: '$$',
     color: '223215',
     heat: 0,
+    description: 'Delicate black tea with floral, musky-sweet notes.',
   },
   {
     id: 143,
@@ -992,6 +1135,7 @@ export const data = () => [
     price: '$$$$$',
     color: '7e25ca',
     heat: 3,
+    description: 'Rich, smooth cocoa with reduced acidity.',
   },
   {
     id: 144,
@@ -999,6 +1143,7 @@ export const data = () => [
     price: '$$$',
     color: 'b2947a',
     heat: 0,
+    description: 'Bold dill flavor with hints of lemon and honey.',
   },
   {
     id: 145,
@@ -1006,6 +1151,7 @@ export const data = () => [
     price: '$$$',
     color: 'd26ae6',
     heat: 4,
+    description: 'Earthy, slightly bitter seeds used in pickling.',
   },
   {
     id: 146,
@@ -1013,6 +1159,7 @@ export const data = () => [
     price: '$$',
     color: 'b6237',
     heat: 4,
+    description: 'Herbaceous, aromatic leaves for salads and soups.',
   },
   {
     id: 147,
@@ -1020,6 +1167,7 @@ export const data = () => [
     price: '$$$$',
     color: 'f0964c',
     heat: 2,
+    description: 'Rich, complex blend for mole and Mexican dishes.',
   },
   {
     id: 148,
@@ -1027,6 +1175,7 @@ export const data = () => [
     price: '$$$$$',
     color: '74a2ee',
     heat: 1,
+    description: 'Black tea with bergamot for a citrusy, floral aroma.',
   },
   {
     id: 149,
@@ -1034,6 +1183,7 @@ export const data = () => [
     price: '$$$$$',
     color: 'd1691d',
     heat: 3,
+    description: 'Full-bodied tea perfect for morning brews.',
   },
   {
     id: 150,
@@ -1041,6 +1191,7 @@ export const data = () => [
     price: '$$',
     color: '19a4ed',
     heat: 5,
+    description: 'Delicate mushrooms with a mild, fruity flavor.',
   },
   {
     id: 151,
@@ -1048,6 +1199,7 @@ export const data = () => [
     price: '$$$',
     color: 'e37e89',
     heat: 3,
+    description: 'Salt infused with rich, bold espresso flavor.',
   },
   {
     id: 152,
@@ -1055,6 +1207,7 @@ export const data = () => [
     price: '$$$$',
     color: 'ffec70',
     heat: 2,
+    description: 'A mix of dried mushrooms for deep, umami flavor.',
   },
   {
     id: 153,
@@ -1062,6 +1215,7 @@ export const data = () => [
     price: '$$$',
     color: 'e6b5b9',
     heat: 2,
+    description: 'Savory blend for marinating meats and veggies.',
   },
   {
     id: 154,
@@ -1069,6 +1223,7 @@ export const data = () => [
     price: '$$$',
     color: '583c2e',
     heat: 0,
+    description: 'Bold spice mix inspired by Asian cuisine.',
   },
   {
     id: 155,
@@ -1076,6 +1231,7 @@ export const data = () => [
     price: '$$',
     color: '7a1ec2',
     heat: 4,
+    description: 'Sweet, herbal pollen with licorice-like notes.',
   },
   {
     id: 156,
@@ -1083,6 +1239,7 @@ export const data = () => [
     price: '$$$$$',
     color: '44ec24',
     heat: 1,
+    description: 'Sweet, aromatic seeds used in cooking and teas.',
   },
   {
     id: 157,
@@ -1090,6 +1247,7 @@ export const data = () => [
     price: '$$$$',
     color: '930c47',
     heat: 3,
+    description: 'Ground fennel with warm, sweet, licorice flavor.',
   },
   {
     id: 158,
@@ -1097,18 +1255,21 @@ export const data = () => [
     price: '$$$',
     color: '27bfb3',
     heat: 5,
+    description: 'Dried leaves with a bitter, slightly sweet taste.',
   },
   {
     id: 159,
     name: 'Fenugreek Powder',
     color: 'dbe986',
     heat: 2,
+    description: 'Ground seeds with a bittersweet, maple-like flavor.',
   },
   {
     id: 160,
     name: 'Fenugreek Seeds, Whole',
     color: '33ccb3',
     heat: 0,
+    description: 'Whole seeds with a slightly bitter, earthy flavor.',
   },
   {
     id: 161,
@@ -1116,12 +1277,15 @@ export const data = () => [
     price: '$$$$',
     color: 'b8468d',
     heat: 3,
+    description:
+      'A blend of black, white, green, pink, and Sichuan peppercorns.',
   },
   {
     id: 162,
     name: 'Five Peppercorn Mélange (Ground)',
     color: '2bd9b6',
     heat: 1,
+    description: 'Ground pepper blend for rich, complex spice.',
   },
   {
     id: 163,
@@ -1129,6 +1293,8 @@ export const data = () => [
     price: '$$',
     color: 'd0a2ac',
     heat: 3,
+    description:
+      'Aromatic blend of cinnamon, cloves, fennel, star anise, and pepper.',
   },
   {
     id: 164,
@@ -1136,6 +1302,7 @@ export const data = () => [
     price: '$$$',
     color: '703692',
     heat: 0,
+    description: 'Delicate, flaky sea salt for finishing dishes.',
   },
   {
     id: 165,
@@ -1143,6 +1310,7 @@ export const data = () => [
     price: '$',
     color: '871430',
     heat: 0,
+    description: 'Ultra-fine sugar ideal for icing and fondant work.',
   },
   {
     id: 166,
@@ -1150,6 +1318,7 @@ export const data = () => [
     price: '$$$',
     color: '477cba',
     heat: 4,
+    description: 'A mix of wild mushrooms with deep, earthy flavor.',
   },
   {
     id: 167,
@@ -1157,6 +1326,8 @@ export const data = () => [
     price: '$',
     color: '17e887',
     heat: 1,
+    description:
+      'A classic blend of black, white, green, and pink peppercorns.',
   },
   {
     id: 168,
@@ -1164,6 +1335,7 @@ export const data = () => [
     price: '$$$$$',
     color: '9782eb',
     heat: 3,
+    description: 'Ground blend of four peppercorns for versatile seasoning.',
   },
   {
     id: 169,
@@ -1171,6 +1343,7 @@ export const data = () => [
     price: '$$',
     color: '41f9b',
     heat: 3,
+    description: 'Aromatic blend of mustard and French herbs for seasoning.',
   },
   {
     id: 170,
@@ -1178,6 +1351,7 @@ export const data = () => [
     price: '$$',
     color: '349ec9',
     heat: 3,
+    description: 'Aromatic rhizome similar to ginger, with citrusy notes.',
   },
   {
     id: 171,
@@ -1185,6 +1359,7 @@ export const data = () => [
     price: '$$$',
     color: 'ab0e42',
     heat: 5,
+    description: 'Warm, fragrant Indian spice blend for curries.',
   },
   {
     id: 172,
@@ -1192,6 +1367,7 @@ export const data = () => [
     price: '$$',
     color: 'f84d35',
     heat: 4,
+    description: 'Bold garlic and pepper blend for steak and meats.',
   },
   {
     id: 173,
@@ -1199,6 +1375,7 @@ export const data = () => [
     price: '$$',
     color: '66e09e',
     heat: 1,
+    description: 'Ground garlic for easy seasoning and cooking.',
   },
   {
     id: 174,
@@ -1206,12 +1383,14 @@ export const data = () => [
     price: '$$$',
     color: '285d3c',
     heat: 2,
+    description: 'Roasted garlic powder with rich, smoky flavor.',
   },
   {
     id: 175,
     name: 'Garlic Salt',
     color: 'b910df',
     heat: 2,
+    description: 'Blend of garlic powder and salt for quick seasoning.',
   },
   {
     id: 176,
@@ -1219,6 +1398,7 @@ export const data = () => [
     price: '$$$$$',
     color: 'a86db5',
     heat: 4,
+    description: 'Coarse garlic granules for flavor and texture.',
   },
   {
     id: 177,
@@ -1226,6 +1406,7 @@ export const data = () => [
     price: '$$',
     color: 'c7e321',
     heat: 0,
+    description: 'Dried minced garlic for cooking and seasoning.',
   },
   {
     id: 178,
@@ -1233,6 +1414,7 @@ export const data = () => [
     price: '$$$$$',
     color: '5e54d4',
     heat: 4,
+    description: 'Extremely hot pepper powder for intense heat.',
   },
   {
     id: 179,
@@ -1240,6 +1422,7 @@ export const data = () => [
     price: '$$$',
     color: 'e61359',
     heat: 3,
+    description: 'Dried ghost peppers with powerful, lasting heat.',
   },
   {
     id: 180,
@@ -1247,6 +1430,7 @@ export const data = () => [
     price: '$$',
     color: 'af1e53',
     heat: 5,
+    description: 'Pure ginger extract for baking and drinks.',
   },
   {
     id: 181,
@@ -1254,6 +1438,7 @@ export const data = () => [
     price: '$$$$',
     color: '3c3a80',
     heat: 2,
+    description: 'A sweet, spicy tea blend with ginger and peach.',
   },
   {
     id: 182,
@@ -1261,6 +1446,7 @@ export const data = () => [
     price: '$$',
     color: '948c04',
     heat: 1,
+    description: 'Ground ginger for baking and spice blends.',
   },
   {
     id: 183,
@@ -1268,6 +1454,7 @@ export const data = () => [
     price: '$',
     color: 'fc9f08',
     heat: 3,
+    description: 'Dried ginger slices with spicy, citrusy notes.',
   },
   {
     id: 184,
@@ -1275,6 +1462,7 @@ export const data = () => [
     price: '$$$',
     color: '6ebc8c',
     heat: 2,
+    description: 'Coarsely cracked ginger with a bold, spicy flavor.',
   },
   {
     id: 185,
@@ -1282,6 +1470,7 @@ export const data = () => [
     price: '$$',
     color: '3209fb',
     heat: 0,
+    description: 'Sweet, chewy ginger pieces coated in sugar.',
   },
   {
     id: 186,
@@ -1289,6 +1478,7 @@ export const data = () => [
     price: '$$$$',
     color: '16aa81',
     heat: 4,
+    description: 'Peppery spice with notes of citrus and cardamom.',
   },
   {
     id: 187,
@@ -1296,6 +1486,7 @@ export const data = () => [
     price: '$$$$',
     color: '19f7d0',
     heat: 2,
+    description: 'Tangy, citrus powder with bright grapefruit flavor.',
   },
   {
     id: 188,
@@ -1303,6 +1494,7 @@ export const data = () => [
     price: '$$$$$',
     color: '71cb2b',
     heat: 1,
+    description: 'Sour, tangy powder made from dried green mangoes.',
   },
   {
     id: 189,
@@ -1310,6 +1502,7 @@ export const data = () => [
     price: '$$$$',
     color: '5b6e7c',
     heat: 2,
+    description: 'Mild, fresh peppercorns with herbal undertones.',
   },
   {
     id: 190,
@@ -1317,6 +1510,7 @@ export const data = () => [
     price: '$$$$',
     color: 'd82b91',
     heat: 5,
+    description: 'Ground peppercorns with a sharp, fresh flavor.',
   },
   {
     id: 191,
@@ -1324,6 +1518,7 @@ export const data = () => [
     price: '$$$',
     color: '8eafd7',
     heat: 1,
+    description: 'Mild chile powder with fresh, grassy notes.',
   },
   {
     id: 192,
@@ -1331,6 +1526,7 @@ export const data = () => [
     price: '$$$',
     color: '9c6254',
     heat: 2,
+    description: 'Traditional Chinese tea with a smooth, tangy taste.',
   },
   {
     id: 193,
@@ -1338,6 +1534,7 @@ export const data = () => [
     price: '$$$',
     color: 'ca7884',
     heat: 4,
+    description: 'Green tea with a fresh, slightly sweet flavor.',
   },
   {
     id: 194,
@@ -1345,12 +1542,14 @@ export const data = () => [
     price: '$$$$',
     color: '2f999a',
     heat: 2,
+    description: 'Mild, smoky chile powder with earthy notes.',
   },
   {
     id: 195,
     name: 'Guajillo Chiles',
     color: 'db425a',
     heat: 2,
+    description: 'Mild, dried Mexican chiles with rich, fruity flavor.',
   },
   {
     id: 196,
@@ -1358,6 +1557,7 @@ export const data = () => [
     price: '$$',
     color: '4d9add',
     heat: 1,
+    description: 'Ground sassafras leaves used to thicken gumbo.',
   },
   {
     id: 197,
@@ -1365,12 +1565,14 @@ export const data = () => [
     price: '$$',
     color: '83c57e',
     heat: 3,
+    description: 'Tightly rolled green tea leaves with bold flavor.',
   },
   {
     id: 198,
     name: 'Habanero Pepper',
     color: 'b434cf',
     heat: 2,
+    description: 'Fiery hot pepper with a fruity, citrusy flavor.',
   },
   {
     id: 199,
@@ -1378,6 +1580,7 @@ export const data = () => [
     price: '$$$$$',
     color: '5e393d',
     heat: 3,
+    description: 'Pure habanero powder for intense, lingering heat.',
   },
   {
     id: 200,
@@ -1385,6 +1588,7 @@ export const data = () => [
     price: '$$$$$',
     color: '85400d',
     heat: 1,
+    description: 'Spicy salt infused with fiery habanero flavor.',
   },
   {
     id: 201,
