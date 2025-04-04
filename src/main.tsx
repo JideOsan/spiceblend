@@ -28,6 +28,11 @@ const router = createBrowserRouter(
           errorElement: <Spices />,
         },
         {
+          path: '/spices',
+          element: <Spices />,
+          errorElement: <Spices />,
+        },
+        {
           path: '/blends',
           element: <Home />,
           errorElement: <Home />,

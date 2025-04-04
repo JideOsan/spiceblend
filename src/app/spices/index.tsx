@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SpicesFeed from '../../components/SpicesFeed';
 import SearchIcon from '../../assets/images/search-icon.svg?react';
 
 function Spices() {
-  const [searchString, updateSearchString] = useState('');
+  const savedSearch = sessionStorage.getItem('spices-search') || '';
+  const [searchString, updateSearchString] = useState(savedSearch);
+
+  useEffect(() => {
+    sessionStorage.setItem('spices-search', searchString);
+  }, [searchString]);
 
   return (
     <div className="relative">

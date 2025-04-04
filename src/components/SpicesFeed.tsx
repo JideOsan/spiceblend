@@ -1,9 +1,11 @@
-import { useCallback, useRef, useEffect } from 'react';
+import { useCallback, useRef, useEffect, useLayoutEffect } from 'react';
 import { FixedSizeGrid as Grid } from 'react-window';
+import type { FixedSizeGrid, GridOnScrollProps } from 'react-window';
 import { motion } from 'framer-motion';
 import { useSpices } from '../data/useSpices';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import PepperIcon from '../assets/images/pepper-icon.svg?react';
+import { NavLink } from 'react-router-dom';
 
 const columnCount = 3;
 const itemHeight = 352;
@@ -15,13 +17,49 @@ export default function SpicesFeed({ searchString }: { searchString: string }) {
 
   const rowCount = Math.ceil(spices.length / columnCount);
 
+  const gridRef = useRef<FixedSizeGrid>(null);
   const previousSpicesRef = useRef(new Set<string>());
+
+  const handleScroll = useCallback(
+    (props: GridOnScrollProps) => {
+      if (gridRef.current) {
+        sessionStorage.setItem(
+          'spices-scroll-position',
+          props.scrollTop.toString(),
+        );
+      }
+    },
+    [gridRef],
+  );
 
   useEffect(() => {
     spices.forEach((spice) =>
       previousSpicesRef.current.add(spice.id.toString()),
     );
   }, [spices]);
+
+  useEffect(() => {
+    const savedPosition = sessionStorage.getItem('spices-scroll-position');
+    if (savedPosition && gridRef.current) {
+      gridRef.current.scrollTo({
+        scrollLeft: 0,
+        scrollTop: parseFloat(savedPosition),
+      });
+    }
+  }, []);
+
+  useLayoutEffect(() => {
+    const savedScrollPosition = sessionStorage.getItem(
+      'spices-scroll-position',
+    );
+
+    if (savedScrollPosition && gridRef.current) {
+      gridRef.current.scrollTo({
+        scrollLeft: 0,
+        scrollTop: parseFloat(savedScrollPosition),
+      });
+    }
+  });
 
   const loadMoreItems = useCallback(
     ({ visibleRowStopIndex }: { visibleRowStopIndex: number }) => {
@@ -42,9 +80,11 @@ export default function SpicesFeed({ searchString }: { searchString: string }) {
           rowCount={rowCount}
           rowHeight={itemHeight}
           width={width}
+          onScroll={handleScroll}
           onItemsRendered={({ visibleRowStopIndex }) => {
             loadMoreItems({ visibleRowStopIndex });
           }}
+          ref={gridRef}
         >
           {({ columnIndex, rowIndex, style }) => {
             const index = rowIndex * columnCount + columnIndex;
@@ -56,15 +96,18 @@ export default function SpicesFeed({ searchString }: { searchString: string }) {
               <motion.div
                 key={spice.id}
                 style={{ ...style }}
-                //initial={{ opacity: 0, scale: 0.8 }}
                 initial={isNewItem ? { opacity: 0, scale: 0.8 } : false}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
-                  duration: 1 /*, delay: isNewItem ? (index - spices.length) * 0.05 : 0,*/,
+                  duration: 1,
+                  delay: isNewItem ? (index - spices.length) * 0.05 : 0,
                 }}
                 className="flex p-4"
               >
-                <div className="w-full h-full bg-gray-50 rounded-2xl border border-gray-4">
+                <NavLink
+                  to={`/spices/${spice.id}`}
+                  className="block w-full h-full bg-gray-50 rounded-2xl border border-gray-4 transition cursor-pointer hover:scale-95"
+                >
                   <div className="w-full h-full flex flex-col items-center">
                     <div className="h-48 w-48 relative overflow-hidden">
                       <img
@@ -93,7 +136,7 @@ export default function SpicesFeed({ searchString }: { searchString: string }) {
                       </div>
                     </div>
                   </div>
-                </div>
+                </NavLink>
               </motion.div>
             ) : null;
           }}
