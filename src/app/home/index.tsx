@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import type { Blend, Spice } from '../../types';
 import { useEffect, useState } from 'react';
+import SpicesFeed from '../../components/SpicesFeed';
 
 function Home() {
   const [spices, setSpices] = useState<Spice[]>([]);
   const [blends, setBlends] = useState<Blend[]>([]);
   const [searchString, updateSearchString] = useState('');
-
+  /*
   useEffect(() => {
     async function fetchSpices() {
       const spicesResponse = await fetch('/api/v1/spices');
@@ -22,7 +23,7 @@ function Home() {
 
     fetchSpices();
     fetchBlends();
-  }, []);
+  }, []);*/
 
   return (
     <div style={{ textAlign: 'center' }}>

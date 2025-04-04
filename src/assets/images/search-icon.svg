@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink"
+width="96" height="96">
+  <title>Search Find</title>
+  <desc>A flat styled icon from Orion Icon Library.</desc>
+  <path data-name="layer3"
+  d="M41.732 36.489L57.34 52.1a3 3 0 0 1-4.24 4.24L37.641 40.883" fill="#ff7566"></path>
+  <circle data-name="layer2" cx="25.816" cy="25.816" r="19.816" fill="#fc9d91"></circle>
+  <circle data-name="layer1" cx="25.815" cy="25.816" r="16.213"
+  fill="#fca79d"></circle>
+  <path data-name="opacity" d="M42.028 25.816A16.16 16.16 0 0 0 37.2 14.283L14.283 37.2a16.154 16.154 0 0 0 11.532 4.825c.109 0 .214-.014.322-.017l15.875-15.87c.002-.108.016-.214.016-.322z"
+  fill="#fff" opacity=".5"></path>
+</svg>
