@@ -105,7 +105,7 @@ export default function SpicesFeed({ searchString }: { searchString: string }) {
               >
                 <NavLink
                   to={`/spices/${spice.id}`}
-                  className="transition cursor-pointer hover:scale-95"
+                  className="transition cursor-pointer hover:scale-[.99]"
                 >
                   <SpiceTile spice={spice} />
                 </NavLink>

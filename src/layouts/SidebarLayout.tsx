@@ -45,11 +45,11 @@ export default function SidebarLayout() {
     <>
       <div className="h-full min-h-screen">
         {/* Sidebar */}
-        <div className="w-72 inset-y-0 fixed flex flex-col border-r border-lightTeal">
+        <div className="w-72 inset-y-0 fixed flex flex-col border-r border-teal-200">
           <div className="flex grow bg-cream p-4 flex-col">
             <div className="text-4xl h-16 w-full flex items-center mb-4 pl-2">
-              <span className="text-coral-1">spice</span>
-              <span className="text-coral-1 font-bold">BLEND</span>
+              <span className="text-coral-500">spice</span>
+              <span className="text-coral-500 font-bold">BLEND</span>
             </div>
             <div>
               <ul className="space-y-2">
@@ -58,7 +58,7 @@ export default function SidebarLayout() {
                     <NavLink
                       to={item.to}
                       className={classNames(
-                        current === item.to ? 'bg-black/5 text-primary' : '',
+                        current === item.to ? 'bg-gray-950/5 text-primary' : '',
                         'flex item-center gap-x-2 text-sm p-2 rounded-md',
                       )}
                     >
@@ -77,7 +77,7 @@ export default function SidebarLayout() {
                     <NavLink
                       to={item.to}
                       className={classNames(
-                        current === item.to ? 'bg-black/5 text-primary' : '',
+                        current === item.to ? 'bg-gray-950/5 text-primary' : '',
                         'flex item-center gap-x-2 text-sm p-2 rounded-md',
                       )}
                     >
@@ -92,7 +92,7 @@ export default function SidebarLayout() {
         </div>
 
         {/* Main Body*/}
-        <main className="pl-72">
+        <main className="pl-72 bg-gray-75">
           <Outlet />
         </main>
       </div>

@@ -1,13 +1,6 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-teal-1: rgb(15 128 125);
-  --color-teal-2: rgb(2 88 94);
-  --color-teal-4: rgb(165 220 218);
-  --color-teal-5: rgb(221 245 244);
-  --color-teal-7: rgb(183 217 216);
-  --color-lightTeal: rgb(210 235 234);
-
   --color-transparent: transparent;
   --color-C3DFDE: rgb(195 223 222);
   --color-CBC7C580: #cbc7c580;
@@ -24,20 +17,53 @@
   --color-fff3ee: rgb(255 243 238);
   --color-gray-rgba: rgba(144, 144, 144, 0.95);
   --color-black: rgb(38 31 29);
-  --color-coral-1: rgb(251 117 100);
-  --color-coral-2: rgb(234 91 80);
-  --color-coral-5: rgb(255 228 217);
-  --color-cream: rgb(249 246 243);
-  --color-danger: rgb(174 21 5);
-  --color-gray-100: rgb(245 245 245);
-  --color-gray-300: rgb(209 213 219);
-  --color-gray-350: rgb(217 217 217);
-  --color-gray-4: rgb(243 243 243);
-  --color-gray-50: rgb(249 250 251);
-  --color-gray-75: rgb(250 250 250);
-  --color-mustard-1: rgb(252 183 49);
-  --color-orange: rgb(252 183 49);
-  --color-primary: rgb(15 128 125);
+
   --color-red-100: rgb(254 226 226);
-  --color-tomo-white: rgb(250 250 250);
+  --color-danger: rgb(174 21 5);
+  --color-mustard-500: rgb(252 183 49); /* --color-orange, --color-mustard-1 */
+
+  --color-cream: rgb(249 246 243);
+
+  --color-teal-50: rgb(239, 250, 249);
+  --color-teal-100: rgb(221, 245, 244); /* Closest to --color-teal-5 */
+  --color-teal-200: rgb(210, 235, 234); /* Closest to --color-lightTeal */
+  --color-teal-300: rgb(183, 217, 216); /* Closest to --color-teal-7 */
+  --color-teal-400: rgb(165, 220, 218); /* Closest to --color-teal-4 */
+  --color-teal-500: rgb(15, 128, 125); /* --color-primary */
+  --color-teal-600: rgb(12, 110, 108);
+  --color-teal-700: rgb(9, 98, 96);
+  --color-teal-800: rgb(4, 78, 80);
+  --color-teal-900: rgb(2, 88, 94); /* --color-teal-2 */
+  --color-teal-950: rgb(1, 64, 68);
+
+  --color-coral-50: rgb(255, 239, 234);
+  --color-coral-100: rgb(255, 228, 217); /* --color-coral-5 */
+  --color-coral-200: rgb(255, 207, 192);
+  --color-coral-300: rgb(254, 179, 162);
+  --color-coral-400: rgb(252, 145, 127);
+  --color-coral-500: rgb(251, 117, 100); /* --color-coral-1 */
+  --color-coral-600: rgb(242, 105, 90);
+  --color-coral-700: rgb(234, 91, 80); /* --color-coral-2 */
+  --color-coral-800: rgb(201, 71, 62);
+  --color-coral-900: rgb(172, 53, 46);
+  --color-coral-950: rgb(135, 38, 31);
+
+  --color-gray-50: rgb(249, 250, 251); /*   --color-gray-50 */
+  --color-gray-75: rgb(
+    250,
+    250,
+    250
+  ); /* Same as --color-gray-75, --color-tomo-white */
+  --color-gray-100: rgb(245, 245, 245);
+  --color-gray-200: rgb(243, 243, 243); /* --color-gray-4 */
+  --color-gray-250: rgb(240, 240, 240);
+  --color-gray-300: rgb(209, 213, 219);
+  --color-gray-400: rgb(217, 217, 217); /* Same as --color-gray-350 */
+  --color-gray-500: rgb(194, 194, 194);
+  --color-gray-600: rgb(160, 160, 160);
+  --color-gray-700: rgb(120, 120, 120);
+  --color-gray-800: rgb(89, 78, 75); /* Adjusted to add warmth */
+  --color-gray-850: rgb(68, 58, 55); /* Adjusted for transition */
+  --color-gray-900: rgb(50, 42, 40); /* Adjusted to be warmer */
+  --color-gray-950: rgb(38, 31, 29); /* Same as --color-black */
 }

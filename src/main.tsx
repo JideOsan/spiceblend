@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './main.css';
 import SidebarLayout from './layouts/SidebarLayout.tsx';
-import Home from './app/home/index.tsx';
+import Blends from './app/blends/index.tsx';
 import Spices from './app/spices/index.tsx';
 import SpiceDetail from './app/spice-detail/index.tsx';
 import BlendDetail from './app/blend-detail/index.tsx';
@@ -34,8 +34,8 @@ const router = createBrowserRouter(
         },
         {
           path: '/blends',
-          element: <Home />,
-          errorElement: <Home />,
+          element: <Blends />,
+          errorElement: <Blends />,
         },
         {
           path: '/spices/:id',
