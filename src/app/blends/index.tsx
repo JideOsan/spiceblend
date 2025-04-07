@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import SpicesFeed from '../../components/SpicesFeed';
+import BlendsFeed from '../../components/BlendsFeed';
 import SearchIcon from '../../assets/images/search-icon.svg?react';
 
 function Blends() {
@@ -12,7 +12,7 @@ function Blends() {
 
   return (
     <div className="relative">
-      <div className="fixed w-full h-24 border-b bg-white border-gray-4 flex items-center z-10">
+      <div className="fixed w-full h-24 border-b bg-white border-gray-200 flex items-center z-10">
         <SearchIcon className="h-5 w-5 my-8 ml-8 absolute" />
         <input
           className="h-full grow pl-14"
@@ -24,7 +24,7 @@ function Blends() {
       </div>
       <div className="h-full min-h-screen pt-24 flex">
         <div className="grow">
-          <SpicesFeed searchString={searchString} />
+          <BlendsFeed searchString={searchString} />
         </div>
       </div>
     </div>

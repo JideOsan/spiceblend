@@ -53,6 +53,22 @@ function resolveSpices(blend: Blend, blends: Blend[]) {
   return Array.from(resolvedSpices.values());
 }
 
+function getAveHeatAndPrice(blendSpices: BlendSpice[]) {
+  let totalHeat = 0;
+  let totalPrice = 0;
+  const spiceCount = blendSpices.length || 0;
+
+  blendSpices.forEach((spice) => {
+    totalHeat += spice.heat;
+    totalPrice += spice.price.length;
+  });
+
+  return {
+    heat: Math.round(totalHeat / spiceCount),
+    price: '$'.repeat(Math.round(totalPrice / spiceCount)),
+  };
+}
+
 export const handlers = [
   http.get('/api/v1/spices', ({ request }) => {
     const url = new URL(request.url);
@@ -104,9 +120,13 @@ export const handlers = [
       : blends;
 
     filteredBlends = filteredBlends.map((blend) => {
+      const resolvedSpices = resolveSpices(blend, blends);
+      const { heat, price } = getAveHeatAndPrice(resolvedSpices);
       return {
         ...blend,
-        resolved_spices: resolveSpices(blend, blends),
+        heat,
+        price,
+        resolved_spices: resolvedSpices,
       };
     });
 
@@ -127,10 +147,15 @@ export const handlers = [
       return new HttpResponse('Not found', { status: 404 });
     }
 
+    const resolvedSpices = resolveSpices(blend, blends);
+    const { heat, price } = getAveHeatAndPrice(resolvedSpices);
+
     return HttpResponse.json({
-      data: { 
-        ...blend, 
-        resolved_spices: resolveSpices(blend, blends),
+      data: {
+        ...blend,
+        heat,
+        price,
+        resolved_spices: resolvedSpices,
       },
     });
   }),

@@ -7,16 +7,16 @@ export default function BlendsFeed({ searchString }: { searchString: string }) {
 
   return (
     <div>
-      {blends.map((blend) => (
+      {blends.map((blend, index) => (
         <motion.div
           key={blend.id}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 1, translateY: '10px' }}
+          animate={{ opacity: 1, scale: 1, translateY: '0px' }}
           transition={{
             duration: 1,
-            //delay: isNewItem ? (index - spices.length) * 0.05 : 0,
+            delay: index * 0.4,
           }}
-          className="flex p-4"
+          className="flex"
         >
           <BlendTile blend={blend} />
         </motion.div>

@@ -18,6 +18,8 @@ export interface Blend {
   description: string;
   color: string;
   image?: string;
+  heat?: number;
+  price?: string;
   blend_ids: number[];
   spice_ids: number[];
   resolved_spices?: BlendSpice[];
