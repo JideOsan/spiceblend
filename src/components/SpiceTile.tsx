@@ -6,7 +6,7 @@ const getSpiceImageUrl = (imageId: number) =>
 
 export default function SpiceTile({ spice }: { spice: Spice }) {
   return (
-    <div className="block shadow-lg shadow-gray-400/40 w-full h-full bg-gray-75 rounded-2xl border border-gray-400 transition cursor-pointer hover:scale-95">
+    <div className="block shadow-lg shadow-gray-400/40 w-full h-full bg-gray-75 rounded-3xl border border-gray-400 transition cursor-pointer hover:scale-95">
       <div className="w-full h-full flex flex-col items-center">
         <div className="h-48 w-48 relative overflow-hidden">
           <img

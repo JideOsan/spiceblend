@@ -1,12 +1,20 @@
 import { motion } from 'framer-motion';
 import { useBlends } from '../data/useBlends';
 import BlendTile from './BlendTile';
+import { classNames } from '../helpers';
 
 export default function BlendsFeed({ searchString }: { searchString: string }) {
   const { blends } = useBlends(searchString);
 
   return (
-    <div>
+    <div className="relative pt-36">
+      <div
+        className={classNames(
+          'transition absolute top-0 left-0 right-0 text-7xl h-36 z-1 pr-6',
+        )}
+      >
+        <h1 className="py-6 pl-10 w-full bg-gray-50">Blends</h1>
+      </div>
       {blends.map((blend, index) => (
         <motion.div
           key={blend.id}

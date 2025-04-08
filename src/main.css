@@ -24,11 +24,12 @@
 
   --color-cream: rgb(249 246 243);
 
-  --color-teal-50: rgb(239, 250, 249);
-  --color-teal-100: rgb(221, 245, 244); /* Closest to --color-teal-5 */
-  --color-teal-200: rgb(210, 235, 234); /* Closest to --color-lightTeal */
-  --color-teal-300: rgb(183, 217, 216); /* Closest to --color-teal-7 */
-  --color-teal-400: rgb(165, 220, 218); /* Closest to --color-teal-4 */
+  --color-teal-30: rgb(239, 250, 249);
+  --color-teal-50: rgb(221, 245, 244); /* Closest to --color-teal-5 */
+  --color-teal-100: rgb(210, 235, 234); /* Closest to --color-lightTeal*/
+  --color-teal-200: rgb(183, 217, 216); /* Closest to --color-teal-7 */
+  --color-teal-300: rgb(165, 220, 218); /* Closest to --color-teal-4 */
+  --color-teal-400: #34afa0;
   --color-teal-500: rgb(15, 128, 125); /* --color-primary */
   --color-teal-600: rgb(12, 110, 108);
   --color-teal-700: rgb(9, 98, 96);
@@ -49,11 +50,7 @@
   --color-coral-950: rgb(135, 38, 31);
 
   --color-gray-50: rgb(249, 250, 251); /*   --color-gray-50 */
-  --color-gray-75: rgb(
-    250,
-    250,
-    250
-  ); /* Same as --color-gray-75, --color-tomo-white */
+  --color-gray-75: rgb(250, 250, 250); /* --color-tomo-white */
   --color-gray-100: rgb(245, 245, 245);
   --color-gray-200: rgb(243, 243, 243); /* --color-gray-4 */
   --color-gray-250: rgb(240, 240, 240);
