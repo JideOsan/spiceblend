@@ -1,16 +1,18 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
-import type { Blend, ServerResponse } from '../types';
+import type { Blend, ServerResponse } from '../../types';
 
 const pageSize = 10;
+
+interface FetchBlendParams {
+  pageParam?: unknown;
+  search?: string;
+}
 
 async function fetchBlends({
   pageParam = 1,
   search = '',
-}: {
-  pageParam?: unknown;
-  search?: string;
-}) {
+}: FetchBlendParams) {
   const response = await fetch(
     `/api/v1/blends?page=${pageParam}&limit=${pageSize}&search=${encodeURIComponent(
       search,

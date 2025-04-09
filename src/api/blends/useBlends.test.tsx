@@ -1,7 +1,7 @@
 import { renderHook, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useBlends } from './useBlends';
-import { server } from '../mocks/server';
+import { server } from '../../mocks/server';
 import { ReactNode } from 'react';
 
 beforeAll(() => server.listen());
@@ -63,7 +63,6 @@ describe('useBlends hook', () => {
     expect(result?.current?.data?.pages[0].data).toHaveLength(1);
     const fetchedBlend = result?.current?.data?.pages[0].data[0];
     if (fetchedBlend) {
-      console.log(JSON.stringify(fetchedBlend, null, 2));
       expect(fetchedBlend.resolved_spices).toHaveLength(14);
     }
   });

@@ -1,6 +1,6 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
-import type { Spice, ServerResponse } from '../types';
+import type { Spice, ServerResponse } from '../../types';
 
 const pageSize = 10;
 
