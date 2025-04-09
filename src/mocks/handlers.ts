@@ -1,73 +1,8 @@
 import { http, HttpResponse } from 'msw';
 import { data as mockSpices } from './data/spices';
 import { data as mockBlends } from './data/blends';
-import { Blend, BlendSpice } from '../types';
-
-function resolveSpices(blend: Blend, blends: Blend[]) {
-  function flattenBlendIds(
-    blend: Blend,
-    blendMap: Map<number, Blend>,
-    aggrgateBlends: number[] = [],
-  ) {
-    aggrgateBlends = [...aggrgateBlends, blend.id];
-
-    blend.blend_ids.forEach((id) => {
-      if (!aggrgateBlends.includes(id)) {
-        const deepBlend = blendMap.get(id);
-        if (!deepBlend) throw Error('Invalid blend id:' + id);
-        aggrgateBlends = flattenBlendIds(deepBlend, blendMap, aggrgateBlends);
-      }
-    });
-
-    return aggrgateBlends;
-  }
-
-  const blendMap = new Map(blends.map((b) => [b.id, b]));
-  const includedBlendsIds = flattenBlendIds(blend, blendMap);
-
-  const resolvedSpices: Map<number, BlendSpice> = new Map();
-  const spiceMap = new Map(mockSpices().map((s) => [s.id, s]));
-
-  includedBlendsIds.forEach((id) => {
-    const includedBlend = blendMap.get(id);
-    if (!includedBlend) throw Error('Invalid blend id:' + id);
-    includedBlend.spice_ids.forEach((id) => {
-      const includedBlendSpice = resolvedSpices.get(id);
-      if (includedBlendSpice) {
-        resolvedSpices.set(id, {
-          ...includedBlendSpice,
-          blend_ids: [...includedBlendSpice.blend_ids, includedBlend.id],
-        });
-      } else {
-        const newIncludedBlendSpice = spiceMap.get(id);
-        if (newIncludedBlendSpice) {
-          resolvedSpices.set(id, {
-            ...newIncludedBlendSpice,
-            blend_ids: [newIncludedBlendSpice.id],
-          });
-        }
-      }
-    });
-  });
-
-  return Array.from(resolvedSpices.values());
-}
-
-function getAveHeatAndPrice(blendSpices: BlendSpice[]) {
-  let totalHeat = 0;
-  let totalPrice = 0;
-  const spiceCount = blendSpices.length || 0;
-
-  blendSpices.forEach((spice) => {
-    totalHeat += spice.heat;
-    totalPrice += spice.price.length;
-  });
-
-  return {
-    heat: Math.round(totalHeat / spiceCount),
-    price: '$'.repeat(Math.round(totalPrice / spiceCount)),
-  };
-}
+import { Blend } from '../types';
+import { createBlend, getAveHeatAndPrice, resolveSpices, mergeLocalBlends } from './helpers';
 
 export const handlers = [
   http.get('/api/v1/spices', ({ request }) => {
@@ -113,14 +48,16 @@ export const handlers = [
     const url = new URL(request.url);
     const search = url.searchParams.get('search')?.toLowerCase() || '';
 
-    const blends = mockBlends();
+    const blends = mergeLocalBlends(mockBlends());
 
     let filteredBlends = search
       ? blends.filter((blend) => blend.name.toLowerCase().includes(search))
       : blends;
 
+    const spices = mockSpices();
+
     filteredBlends = filteredBlends.map((blend) => {
-      const resolvedSpices = resolveSpices(blend, blends);
+      const resolvedSpices = resolveSpices(blend, blends, spices);
       const { heat, price } = getAveHeatAndPrice(resolvedSpices);
       return {
         ...blend,
@@ -135,8 +72,38 @@ export const handlers = [
     });
   }),
 
-  http.post('/api/v1/blends', () => {
-    return HttpResponse.json({ success: true });
+  http.post('/api/v1/blends', async ({ request }) => {
+    const body = (await request.json()) as object | undefined | null;
+
+    if (!body)
+      return HttpResponse.json({
+        success: false,
+        code: 401,
+        message: 'Invalid Body',
+      });
+
+    const newBlend: Blend = createBlend(body);
+
+    const localBlends: Blend[] = JSON.parse(
+      localStorage.getItem('blends') || '[]',
+    );
+
+    const updatedLocalBlends = [...localBlends, newBlend];
+
+    localStorage.setItem('blends', JSON.stringify(updatedLocalBlends));
+
+    const blends = [...mockBlends(), ...updatedLocalBlends];
+    const resolvedSpices = resolveSpices(newBlend, blends, mockSpices());
+    const { heat, price } = getAveHeatAndPrice(resolvedSpices);
+
+    return HttpResponse.json({
+      data: {
+        ...newBlend,
+        heat,
+        price,
+        resolved_spices: resolvedSpices,
+      },
+    });
   }),
 
   http.get('/api/v1/blends/:id', ({ params }) => {
@@ -147,7 +114,7 @@ export const handlers = [
       return new HttpResponse('Not found', { status: 404 });
     }
 
-    const resolvedSpices = resolveSpices(blend, blends);
+    const resolvedSpices = resolveSpices(blend, blends, mockSpices());
     const { heat, price } = getAveHeatAndPrice(resolvedSpices);
 
     return HttpResponse.json({
