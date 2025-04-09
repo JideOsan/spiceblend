@@ -64,3 +64,30 @@
   --color-gray-900: rgb(50, 42, 40); /* Adjusted to be warmer */
   --color-gray-950: rgb(38, 31, 29); /* Same as --color-black */
 }
+
+/* Custom layout */
+.blend-color-picker .react-colorful {
+  @apply bg-gray-200 rounded-2xl shadow-2xl p-4;
+}
+
+.blend-color-picker .react-colorful__saturation {
+  margin: 15px 0;
+  border-radius: 5px;
+  border-bottom: none;
+}
+
+.blend-color-picker .react-colorful__hue {
+  order: -1;
+}
+
+.blend-color-picker .react-colorful__hue,
+.blend-color-picker .react-colorful__alpha {
+  height: 14px;
+  border-radius: 5px;
+}
+
+.blend-color-picker .react-colorful__hue-pointer,
+.blend-color-picker .react-colorful__alpha-pointer {
+  width: 20px;
+  height: 20px;
+}
