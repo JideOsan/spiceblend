@@ -15,7 +15,11 @@ export default function BlendTile({ blend }: { blend: Blend }) {
             ))}
           </div>
         </div>
-        <BlendTileCover blend={blend} cardClassName="transition cursor-pointer hover:scale-95" className="absolute top-0 left-0" />
+        <BlendTileCover
+          blend={blend}
+          cardClassName="transition cursor-pointer hover:scale-95"
+          className="absolute top-0 left-0"
+        />
       </div>
     </div>
   );

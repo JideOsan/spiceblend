@@ -17,7 +17,7 @@ export default function BlendTileCover({
       <div className="block relative w-full h-full">
         <div
           className={classNames(
-            cardClassName || "",
+            cardClassName || '',
             'w-full h-full flex flex-col items-center rounded-3xl bg-gray-50 border border-gray-200 relative',
           )}
           style={{ backgroundColor: blend.color }}

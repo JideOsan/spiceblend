@@ -31,7 +31,7 @@ const CreateBlendForm = () => {
       backgroundColor,
       coverImage,
     };
-    console.log(blendData)
+    console.log(blendData);
   };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -100,30 +100,30 @@ const CreateBlendForm = () => {
           className="hidden"
         />
         <div className="relative flex">
-        <BlendTileCover
-          cardClassName="shadow-xl shadow-gray-950/10"
-          blend={{
-            id: 0,
-            image: coverImage ? URL.createObjectURL(coverImage) : undefined,
-            heat: 4,
-            price: '$$$',
-            name: name || 'Blend Title',
-            description:
-              description ||
-              'A description for this new blend that is no longer that 50 charaters',
-            color: backgroundColor,
-            blend_ids: [],
-            spice_ids: [],
-          }}
-        />
+          <BlendTileCover
+            cardClassName="shadow-xl shadow-gray-950/10"
+            blend={{
+              id: 0,
+              image: coverImage ? URL.createObjectURL(coverImage) : undefined,
+              heat: 4,
+              price: '$$$',
+              name: name || 'Blend Title',
+              description:
+                description ||
+                'A description for this new blend that is no longer that 50 charaters',
+              color: backgroundColor,
+              blend_ids: [],
+              spice_ids: [],
+            }}
+          />
         </div>
       </div>
       <button
-          type="submit"
-          className="mt-4 bg-teal-600 col-span-2 text-white py-2 px-4 rounded-lg hover:bg-teal-700"
-        >
-          Create Blend
-        </button>
+        type="submit"
+        className="mt-4 bg-teal-600 col-span-2 text-white py-2 px-4 rounded-lg hover:bg-teal-700"
+      >
+        Create Blend
+      </button>
     </form>
   );
 };
