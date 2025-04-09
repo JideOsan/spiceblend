@@ -20,7 +20,7 @@ const Modal = ({ isOpen, onClose, children }: Props) => {
         >
           <motion.div
             key="modal"
-            className="w-full max-w-2xl overflow-clip"
+            className="w-full max-w-2xl"
             initial={{ y: -50, opacity: 0, scale: 0.95 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: -30, opacity: 0, scale: 0.95 }}
