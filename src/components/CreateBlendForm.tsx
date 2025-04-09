@@ -70,7 +70,7 @@ const CreateBlendForm = () => {
         <div className="absolute right-2 bottom-20 z-10">
           <div className="relative">
             <button
-            type='button'
+              type="button"
               onClick={() => setShowColorPicker((s) => !s)}
               className="relative cursor-pointer transition z-10 hover:scale-105 shadow-lg bg-teal-500 h-8 w-8 flex items-center justify-center rounded-full "
             >

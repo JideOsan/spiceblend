@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useBlends } from '../data/useBlends';
+import { useBlends } from '../api/blends/useBlends';
 import BlendTile from './BlendTile';
 import { classNames } from '../helpers';
 
