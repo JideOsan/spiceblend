@@ -1,7 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import ArrowIcon from '../../assets/images/arrow-icon.svg?react';
 import { motion } from 'framer-motion';
-//import BlendTileCover from '../../components/BlendTileCover';
 import { useSpice } from '../../api/spices/useSpice';
 import SpiceTile from '../../components/SpiceTile';
 import BlendTileCover from '../../components/BlendTileCover';
