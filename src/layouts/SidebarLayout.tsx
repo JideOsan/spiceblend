@@ -37,7 +37,7 @@ export default function SidebarLayout() {
   return (
     <>
       <div className="h-full min-h-screen">
-      <CreateBlendModal />
+        <CreateBlendModal />
         {/* Sidebar */}
         <div className="w-72 inset-y-0 fixed flex flex-col border-r border-teal-100">
           <div className="flex grow bg-cream p-4 flex-col">

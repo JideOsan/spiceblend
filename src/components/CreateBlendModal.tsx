@@ -9,16 +9,20 @@ import {
   useCreateBlend,
 } from '../api/blends/useCreateBlend';
 import { useNavigate } from 'react-router-dom';
-import Modal, { ModalProps } from './Modal';
+import Modal from './Modal';
+import { useModal } from '../hooks/useModal';
 
 type BlendFormValues = {
   name: string;
   description: string;
 };
 
-const CreateBlendForm: React.FC<ModalProps> = ({ onClose, isOpen }) => {
+const modalName = 'create-blend';
+
+const CreateBlendForm: React.FC = () => {
   const mutation = useCreateBlend();
   const navigate = useNavigate();
+  const { closeModal, isOpen } = useModal();
 
   const { register, watch, handleSubmit } = useForm<BlendFormValues>({
     defaultValues: {
@@ -44,7 +48,7 @@ const CreateBlendForm: React.FC<ModalProps> = ({ onClose, isOpen }) => {
     };
 
     const { data: newBlend } = await mutation.mutateAsync(blendData);
-    onClose();
+    closeModal();
     navigate(`/blends/${newBlend.id}?edit=true`);
   };
 
@@ -54,7 +58,7 @@ const CreateBlendForm: React.FC<ModalProps> = ({ onClose, isOpen }) => {
   };
 
   return (
-    <Modal onClose={onClose} isOpen={isOpen}>
+    <Modal onClose={closeModal} isOpen={isOpen(modalName)}>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="grid grid-cols-2 gap-6 p-12 max-w-5xl mx-auto bg-cream rounded-3xl shadow-xl border border-gray-700"

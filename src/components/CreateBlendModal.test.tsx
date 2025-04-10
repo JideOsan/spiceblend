@@ -10,9 +10,10 @@ describe('Create Blend Form', () => {
     render(
       <QueryClientProvider client={queryClient}>
         <MemoryRouter
+          initialEntries={['/blends?modal=create-blend']}
           future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
         >
-          <CreateBlendModal isOpen={true} onClose={() => {}} />
+          <CreateBlendModal />
         </MemoryRouter>
       </QueryClientProvider>,
     );
