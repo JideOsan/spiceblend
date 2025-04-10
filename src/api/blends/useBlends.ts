@@ -9,10 +9,7 @@ interface FetchBlendParams {
   search?: string;
 }
 
-async function fetchBlends({
-  pageParam = 1,
-  search = '',
-}: FetchBlendParams) {
+async function fetchBlends({ pageParam = 1, search = '' }: FetchBlendParams) {
   const response = await fetch(
     `/api/v1/blends?page=${pageParam}&limit=${pageSize}&search=${encodeURIComponent(
       search,

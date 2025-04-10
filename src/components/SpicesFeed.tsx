@@ -8,7 +8,7 @@ import {
 import { FixedSizeGrid as Grid } from 'react-window';
 import type { FixedSizeGrid, GridOnScrollProps } from 'react-window';
 import { motion } from 'framer-motion';
-import { useSpices } from '../api/useSpices';
+import { useSpices } from '../api/spices/useSpices';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { NavLink } from 'react-router-dom';
 import SpiceTile from './SpiceTile';

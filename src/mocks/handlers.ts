@@ -2,7 +2,12 @@ import { http, HttpResponse } from 'msw';
 import { data as mockSpices } from './data/spices';
 import { data as mockBlends } from './data/blends';
 import { Blend } from '../types';
-import { createBlend, getAveHeatAndPrice, resolveSpices, mergeLocalBlends } from './helpers';
+import {
+  createBlend,
+  getAveHeatAndPrice,
+  resolveSpices,
+  mergeLocalBlends,
+} from './helpers';
 
 export const handlers = [
   http.get('/api/v1/spices', ({ request }) => {
@@ -99,6 +104,59 @@ export const handlers = [
     return HttpResponse.json({
       data: {
         ...newBlend,
+        heat,
+        price,
+        resolved_spices: resolvedSpices,
+      },
+    });
+  }),
+
+  http.put('/api/v1/blends/:id', async ({ request, params }) => {
+    const body = (await request.json()) as Partial<Blend> | undefined | null;
+    const { id } = params;
+
+    if (!id || !body) {
+      return HttpResponse.json({
+        success: false,
+        code: 400,
+        message: 'Missing ID or body',
+      });
+    }
+
+    const blendId = parseInt(id as string, 10);
+    const localBlends: Blend[] = JSON.parse(
+      localStorage.getItem('blends') || '[]',
+    );
+
+    const existingBlend = localBlends.find((b) => b.id === blendId);
+    if (!existingBlend) {
+      return HttpResponse.json({
+        success: false,
+        code: 404,
+        message: 'Blend not found',
+      });
+    }
+
+    const updatedBlend: Blend = {
+      ...existingBlend,
+      ...body,
+      id: existingBlend.id,
+    };
+
+    const updatedLocalBlends = localBlends.map((b) =>
+      b.id === updatedBlend.id ? updatedBlend : b,
+    );
+
+    localStorage.setItem('blends', JSON.stringify(updatedLocalBlends));
+
+    const blends = [...mockBlends(), ...updatedLocalBlends];
+    const resolvedSpices = resolveSpices(updatedBlend, blends, mockSpices());
+    const { heat, price } = getAveHeatAndPrice(resolvedSpices);
+
+    return HttpResponse.json({
+      success: true,
+      data: {
+        ...updatedBlend,
         heat,
         price,
         resolved_spices: resolvedSpices,
