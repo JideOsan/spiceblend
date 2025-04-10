@@ -1,8 +1,9 @@
 /// <reference types="vite-plugin-svgr/client" />
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import React from 'react';
+import React, { useMemo } from 'react';
 import BlendIcon from './../assets/images/blend-icon.svg?react';
 import { classNames } from '../helpers';
+import { useBlends } from '../api/blends/useBlends';
 
 interface NavigationLink {
   name: string;
@@ -12,6 +13,7 @@ interface NavigationLink {
 
 export default function SidebarLayout() {
   const { pathname } = useLocation();
+  const { blends } = useBlends('');
 
   const navigation: NavigationLink[] = [
     {
@@ -26,18 +28,10 @@ export default function SidebarLayout() {
     },
   ];
 
-  const userBlends: NavigationLink[] = [
-    {
-      name: 'Taco Seasoning',
-      icon: BlendIcon,
-      to: '',
-    },
-    {
-      name: 'Steak Seasoning',
-      icon: BlendIcon,
-      to: '',
-    },
-  ];
+  const userBlends = useMemo(
+    () => blends.filter((blend) => !blend.locked),
+    [blends],
+  );
 
   return (
     <>
@@ -73,20 +67,20 @@ export default function SidebarLayout() {
               <div className="text-xs text-gray-700 font-bold mb-2">
                 Your Blends
               </div>
-              <ul className="space-y-4">
-                {userBlends.map((item) => (
-                  <li key={item.name}>
+              <ul className="space-y-2">
+                {userBlends.map((blend) => (
+                  <li key={blend.name}>
                     <NavLink
-                      to={item.to}
+                      to={`/blends/${blend.id}`}
                       className={classNames(
-                        pathname === item.to
+                        pathname === `/blends/${blend.id}`
                           ? 'bg-gray-950/5 '
                           : 'hover:bg-gray-950/10 hover:text-gray-850',
                         'flex item-center gap-x-2 text-sm p-2 rounded-md text-gray-700',
                       )}
                     >
-                      <item.icon className="w-4" />
-                      <span className="mt-1 font-medium">{item.name}</span>
+                      <BlendIcon className="w-4" />
+                      <span className="mt-1 font-medium">{blend.name}</span>
                     </NavLink>
                   </li>
                 ))}

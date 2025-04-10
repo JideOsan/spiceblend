@@ -2,7 +2,13 @@ import { Blend } from '../types';
 import BlendTileCover from './BlendTileCover';
 import SpiceTile from './SpiceTile';
 
-export default function BlendTile({ blend }: { blend: Blend }) {
+export default function BlendTile({
+  blend,
+  to,
+}: {
+  blend: Blend;
+  to?: string;
+}) {
   return (
     <div className="w-full h-88 p-4">
       <div className="w-full h-full overflow-clip relative rounded-3xl">
@@ -17,7 +23,7 @@ export default function BlendTile({ blend }: { blend: Blend }) {
         </div>
         <BlendTileCover
           blend={blend}
-          cardClassName="transition cursor-pointer hover:scale-95"
+          to={to}
           className="absolute top-0 left-0"
         />
       </div>

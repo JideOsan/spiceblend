@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard Copy 2</title>
+    <g id="Artboard-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Orion_edit" transform="translate(4.000000, 4.000000)" fill-rule="nonzero">
+            <path d="M84.072,24.6275661 L85.4835,23.2160661 C90.939,17.7590661 89.5335,10.3235661 84.072,4.86656607 C78.6105,-0.590433929 71.172,-2.00343393 65.721,3.45656607 L64.3095,4.86806607" id="Path" fill="currentColor" opacity="0.703543527"></path>
+            <polyline id="Path" fill="currentColor" opacity="0.5" points="75.4305 33.2750661 84.0795 24.6275661 64.3155 4.86806607 55.6695 13.5125661"></polyline>
+            <polyline id="Path" fill="currentColor" opacity="0.6" points="25.8105 82.8665661 25.845 82.8575661 75.4305 33.2750661 55.6695 13.5125661 6.0855 63.0965661 6.0765 63.1295661"></polyline>
+            <polygon id="Path" fill="#FFFFFF" opacity="0.25" points="55.6725 13.5155661 6.0885 63.0980661 6.0735 63.1235661 12.6495 69.7025661 12.675 69.6860661 62.2605 20.1020661"></polygon>
+            <polygon id="Path" fill="currentColor" opacity="0.2" points="68.847 26.6900661 19.2645 76.2740661 19.248 76.2995661 25.824 82.8770661 25.8495 82.8605661 75.435 33.2765661"></polygon>
+            <polygon id="Path" fill="currentColor" opacity="0.5" points="25.8105 82.8665661 6.0765 63.1295661 2.0685 80.1575661 8.7855 86.8760661 25.8105 82.8665661"></polygon>
+            <polygon id="Path" fill="currentColor" points="8.7855 86.8760661 2.0685 80.1575661 0 88.9460661"></polygon>
+            <path d="M25.8105,82.8665661 L16.08,73.1345661 L0,88.9460661 L25.8105,82.8665661 L25.8105,82.8665661 Z M75.4305,33.2750661 L84.072,24.6290661 L85.485,23.2175661 C90.9405,17.7605661 89.535,10.3250661 84.072,4.86806607 L65.55,23.3945661 L75.4305,33.2750661 Z" id="Shape" fill="currentColor" opacity="0.15"></path>
+        </g>
+    </g>
+</svg>
