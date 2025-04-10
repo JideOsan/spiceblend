@@ -1,5 +1,6 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { screen, fireEvent } from '@testing-library/react';
 import SearchableLayout from './SearchableLayout';
+import { renderWithProviders } from './../../vitest.setup';
 
 describe('Feed With Search Layout', () => {
   beforeEach(() => {
@@ -9,7 +10,7 @@ describe('Feed With Search Layout', () => {
   it('renders with initial value from sessionStorage', () => {
     sessionStorage.setItem('testKey', 'Initial Search');
 
-    render(
+    renderWithProviders(
       <SearchableLayout searchSessionKey="testKey">
         {({ searchString }) => <div>Search String: {searchString}</div>}
       </SearchableLayout>,
@@ -22,7 +23,7 @@ describe('Feed With Search Layout', () => {
   });
 
   it('updates sessionStorage when typing in the input', () => {
-    render(
+    renderWithProviders(
       <SearchableLayout searchSessionKey="testKey">
         {({ searchString }) => <div>Search String: {searchString}</div>}
       </SearchableLayout>,
@@ -37,7 +38,7 @@ describe('Feed With Search Layout', () => {
   });
 
   it('passes searchString prop to child function', () => {
-    render(
+    renderWithProviders(
       <SearchableLayout searchSessionKey="testKey">
         {({ searchString }) => <div>Search String: {searchString}</div>}
       </SearchableLayout>,

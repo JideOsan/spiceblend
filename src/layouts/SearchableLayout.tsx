@@ -1,8 +1,7 @@
 import { useState, useEffect, ReactElement } from 'react';
 import SearchIcon from '../assets/images/search-icon.svg?react';
 import AddIcon from '../assets/images/plus-icon.svg?react';
-import Modal from '../components/Modal';
-import CreateBlendForm from '../components/CreateBlendForm';
+import CreateBlendModal from '../components/CreateBlendModal';
 
 interface FeedWithSearchProps {
   searchSessionKey: string;
@@ -23,9 +22,10 @@ const FeedWithSearch: React.FC<FeedWithSearchProps> = ({
 
   return (
     <>
-      <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-        <CreateBlendForm />
-      </Modal>
+      <CreateBlendModal
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+      />
       <div className="relative flex flex-col h-screen">
         <div className="absolute top-0 left-0 right-0 h-24 border-b bg-white border-gray-200 flex items-center z-10">
           <SearchIcon className="h-5 w-5 my-8 ml-8 absolute" />

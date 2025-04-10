@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { Blend, ServerResponse } from '../../types';
 
-type CreateBlendPayload = Omit<
+export type CreateBlendPayload = Omit<
   Blend,
   'id' | 'heat' | 'price' | 'resolved_spices'
 >;
