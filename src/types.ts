@@ -6,6 +6,7 @@ export interface Spice {
   heat: number;
   price: string;
   image?: string;
+  used_in_blends?: Blend[];
 }
 
 export interface BlendSpice extends Spice {
@@ -20,6 +21,7 @@ export interface Blend {
   image?: string;
   heat?: number;
   price?: string;
+  locked?: boolean;
   blend_ids: number[];
   spice_ids: number[];
   resolved_spices?: BlendSpice[];

@@ -40,11 +40,23 @@ export const handlers = [
   }),
 
   http.get('/api/v1/spices/:id', ({ params }) => {
-    const spice = mockSpices().find((spice) => spice.id === Number(params.id));
+    const spiceId = Number(params.id);
+    const spices = mockSpices();
+    const spice = spices.find((spice) => spice.id === spiceId);
 
     if (!spice) {
       return new HttpResponse('Not found', { status: 404 });
     }
+
+    const blends = mergeLocalBlends(mockBlends());
+    const hydratedBlends = blends.map((blend) => ({
+      ...blend,
+      resolved_spices: resolveSpices(blend, blends, spices),
+    }));
+
+    spice.used_in_blends = hydratedBlends.filter((blend) => {
+      return blend.resolved_spices?.some((spice) => spice.id === spiceId);
+    });
 
     return HttpResponse.json({ data: spice });
   }),
@@ -165,7 +177,7 @@ export const handlers = [
   }),
 
   http.get('/api/v1/blends/:id', ({ params }) => {
-    const blends = mockBlends();
+    const blends = mergeLocalBlends(mockBlends());
     const blend = blends.find((blend) => blend.id === Number(params.id));
 
     if (!blend) {
