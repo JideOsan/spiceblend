@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './main.css';
 import SidebarLayout from './layouts/SidebarLayout.tsx';
-import Blends from './app/blends/index.tsx';
-import Spices from './app/spices/index.tsx';
-import SpiceDetail from './app/spice-detail/index.tsx';
-import BlendDetail from './app/blend-detail/index.tsx';
+import Blends from './pages/blends/index.tsx';
+import Spices from './pages/spices/index.tsx';
+import SpiceDetail from './pages/spice-detail/index.tsx';
+import BlendDetail from './pages/blend-detail/index.tsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 async function enableMocking() {
