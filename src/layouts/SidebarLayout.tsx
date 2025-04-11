@@ -4,7 +4,7 @@ import React, { useMemo } from 'react';
 import BlendIcon from './../assets/images/blend-icon.svg?react';
 import { classNames } from '../helpers';
 import { useBlends } from '../api/blends/useBlends';
-import CreateBlendModal from '../components/CreateBlendModal';
+import BlendFormModal from '../components/BlendFormModal';
 
 interface NavigationLink {
   name: string;
@@ -37,7 +37,7 @@ export default function SidebarLayout() {
   return (
     <>
       <div className="h-full min-h-screen">
-        <CreateBlendModal />
+        <BlendFormModal />
         {/* Sidebar */}
         <div className="w-72 inset-y-0 fixed flex flex-col border-r border-teal-100">
           <div className="flex grow bg-cream p-4 flex-col">

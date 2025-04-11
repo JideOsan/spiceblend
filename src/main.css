@@ -1,5 +1,15 @@
 @import 'tailwindcss';
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 @theme {
   --color-transparent: transparent;
   --color-C3DFDE: rgb(195 223 222);

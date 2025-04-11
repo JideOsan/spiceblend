@@ -32,7 +32,7 @@ const BlendDetail = () => {
   return (
     <div>
       <div className="relative flex flex-col h-screen">
-        <div className="h-24 flex items-center">
+        <div className="h-24 flex shrink-0 items-center">
           <button
             onClick={() => navigate(-1)}
             className="ml-6 text-gray-700 cursor-pointer flex items-center text-xl h rounded-full py-3.5 px-6"
@@ -42,7 +42,7 @@ const BlendDetail = () => {
           </button>
         </div>
 
-        <div className="grow flex flex-col overflow-y-auto">
+        <div className="grow">
           <div className="text-7xl h-36 pr-6 py-6">
             <h1 className="pl-10 w-full bg-gray-50 inline">Blend Detail</h1>
             {!blend?.locked && (
@@ -59,7 +59,7 @@ const BlendDetail = () => {
               </button>
             )}
           </div>
-          <div className="p-4">
+          <div className="p-4 h-96">
             {blend && (
               <motion.div
                 key={blend.id}
@@ -85,7 +85,7 @@ const BlendDetail = () => {
                 <motion.div
                   key="drawer"
                   initial={{ height: 0 }}
-                  animate={{ height: '100%' }}
+                  animate={{ height: 600 }}
                   exit={{ height: 0 }}
                   transition={{}}
                   className="overflow-hidden bg-teal-500 inset-shadow-lg"

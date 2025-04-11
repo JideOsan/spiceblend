@@ -17,12 +17,10 @@ type BlendFormValues = {
   description: string;
 };
 
-const modalName = 'create-blend';
-
-const CreateBlendForm: React.FC = () => {
+const BlendFormModal: React.FC = () => {
   const mutation = useCreateBlend();
   const navigate = useNavigate();
-  const { closeModal, isOpen } = useModal();
+  const { closeModal, isOpen, modal } = useModal();
 
   const { register, watch, handleSubmit } = useForm<BlendFormValues>({
     defaultValues: {
@@ -58,12 +56,17 @@ const CreateBlendForm: React.FC = () => {
   };
 
   return (
-    <Modal onClose={closeModal} isOpen={isOpen(modalName)}>
+    <Modal
+      onClose={closeModal}
+      isOpen={isOpen('create-blend') || isOpen('edit-blend')}
+    >
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="grid grid-cols-2 gap-6 p-12 max-w-5xl mx-auto bg-cream rounded-3xl shadow-xl border border-gray-700"
       >
-        <h2 className="col-span-2 text-xl">Lets create a new Blend</h2>
+        <h2 className="col-span-2 text-xl">{`Lets ${
+          modal === 'create-blend' ? 'create a new' : 'edit your'
+        } Blend`}</h2>
         <div className="flex flex-col gap-4">
           <label className="flex flex-col text-sm">
             What is the name of your blend?
@@ -149,4 +152,4 @@ const CreateBlendForm: React.FC = () => {
   );
 };
 
-export default CreateBlendForm;
+export default BlendFormModal;

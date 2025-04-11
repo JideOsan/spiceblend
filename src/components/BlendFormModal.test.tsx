@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import CreateBlendModal from './CreateBlendModal';
+import BlendFormModal from './BlendFormModal';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MemoryRouter } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ describe('Create Blend Form', () => {
           initialEntries={['/blends?modal=create-blend']}
           future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
         >
-          <CreateBlendModal />
+          <BlendFormModal />
         </MemoryRouter>
       </QueryClientProvider>,
     );
