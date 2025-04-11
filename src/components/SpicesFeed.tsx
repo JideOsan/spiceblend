@@ -97,6 +97,7 @@ export default function SpicesFeed({ searchString }: { searchString: string }) {
             <h1 className="py-6 pl-10 w-full bg-gray-50">Spices</h1>
           </div>
           <Grid
+          className='z-10'
             columnCount={columnCount}
             columnWidth={itemWidth}
             height={height}
@@ -128,7 +129,7 @@ export default function SpicesFeed({ searchString }: { searchString: string }) {
                     duration: 1,
                     delay: isNewItem ? (index - spices.length) * 0.05 : 0,
                   }}
-                  className="flex p-4"
+                  className="flex p-4 bg-gray-50"
                 >
                   <NavLink
                     to={`/spices/${spice.id}`}
