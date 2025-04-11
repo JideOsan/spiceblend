@@ -9,13 +9,13 @@ export function useModal() {
   const openModal = (modalName: string) => {
     const params = new URLSearchParams(searchParams);
     params.set(key, modalName);
-    setSearchParams(params);
+    setSearchParams(params, { replace: true });
   };
 
   const closeModal = () => {
     const params = new URLSearchParams(searchParams);
     params.delete(key);
-    setSearchParams(params);
+    setSearchParams(params, { replace: true });
   };
 
   return {

@@ -16,7 +16,7 @@ export default function SpiceTile({
     <div
       className={classNames(
         className ? className : 'shadow-lg shadow-gray-400/40',
-        'block w-full h-full bg-gray-75 rounded-3xl border border-gray-400 transition cursor-pointer hover:scale-95',
+        'block w-full h-full bg-gray-75 rounded-3xl border border-gray-400 transition',
       )}
     >
       <div className="w-full h-full flex flex-col items-center">

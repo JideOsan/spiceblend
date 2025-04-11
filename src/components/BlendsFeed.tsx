@@ -26,7 +26,11 @@ export default function BlendsFeed({ searchString }: { searchString: string }) {
           }}
           className="flex"
         >
-          <BlendTile to={`/blends/${blend.id}`} blend={blend} />
+          <BlendTile
+            editable={false}
+            to={`/blends/${blend.id}`}
+            blend={blend}
+          />
         </motion.div>
       ))}
     </div>

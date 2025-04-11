@@ -14,7 +14,7 @@ const FeedWithSearch: React.FC<FeedWithSearchProps> = ({
 }) => {
   const savedSearch = sessionStorage.getItem(searchSessionKey) || '';
   const [searchString, updateSearchString] = useState(savedSearch);
-  const { openModal } = useModal()
+  const { openModal } = useModal();
 
   useEffect(() => {
     sessionStorage.setItem(searchSessionKey, searchString);

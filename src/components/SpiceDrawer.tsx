@@ -4,8 +4,8 @@ import type { FixedSizeList } from 'react-window';
 import { motion } from 'framer-motion';
 import { useSpices } from '../api/spices/useSpices';
 import AutoSizer from 'react-virtualized-auto-sizer';
-import { NavLink } from 'react-router-dom';
 import SpiceTile from './SpiceTile';
+import CheckIcon from './../assets/images/check-icon.svg?react';
 
 const columnCount = 3;
 const itemHeight = 352;
@@ -13,8 +13,12 @@ const itemWidth = 288;
 
 export default function SpiceDrawer({
   searchString,
+  onSelectSpice,
+  selected,
 }: {
   searchString: string;
+  onSelectSpice: (spice_id: number) => Promise<void>;
+  selected: Set<number>;
 }) {
   const { fetchNextPage, hasNextPage, spices } = useSpices(searchString);
 
@@ -70,15 +74,22 @@ export default function SpiceDrawer({
                 }}
                 className="flex p-4"
               >
-                <NavLink
-                  to={`/spices/${spice.id}`}
-                  className="transition cursor-pointer hover:scale-[.99] w-full"
+                <div
+                  onClick={() => onSelectSpice(spice.id)}
+                  className="transition cursor-pointer hover:scale-[.99] w-full h-full relative"
                 >
+                  {selected.has(spice.id) ? (
+                    <div className="absolute -right-4 top-6 shadow-lg bg-teal-200 h-8 w-8 flex items-center justify-center rounded-full">
+                      <CheckIcon className="w-5 h-5 text-teal-500" />
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                   <SpiceTile
                     className="shadow-lg shadow-gray-950/20"
                     spice={spice}
                   />
-                </NavLink>
+                </div>
               </motion.div>
             ) : null;
           }}

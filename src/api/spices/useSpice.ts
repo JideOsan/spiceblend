@@ -15,6 +15,9 @@ export function useSpice(id: number | string) {
     queryKey: ['spice', id],
     queryFn: () => fetchSpice(id),
     enabled: id !== undefined,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    refetchOnReconnect: false,
   });
 
   return {

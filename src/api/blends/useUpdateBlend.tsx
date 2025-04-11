@@ -26,14 +26,26 @@ export function useUpdateBlend() {
     UpdateBlendPayload
   >({
     mutationFn: updateBlend,
-    onSuccess: ({ data: updatedBlend }) => {
-      queryClient.setQueryData(['blend', updatedBlend.id], updatedBlend);
+    onSuccess: (response) => {
+      queryClient.setQueryData(['blend', response.data.id], response);
       queryClient.invalidateQueries({ queryKey: ['blends'] });
     },
   });
 
+  const addSpice = async (blend: Blend, spiceId: number) => {
+    const spice_ids = Array.from(new Set([...blend.spice_ids, spiceId]));
+    await mutation.mutateAsync({ ...blend, spice_ids });
+  };
+
+  const removeSpice = async (blend: Blend, spiceId: number) => {
+    const spice_ids = blend.spice_ids.filter((id) => id !== spiceId);
+    await mutation.mutateAsync({ ...blend, spice_ids });
+  };
+
   return {
     ...mutation,
+    addSpice,
+    removeSpice,
     blend: mutation.data?.data,
   };
 }
